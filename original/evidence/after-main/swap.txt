@@ -1,0 +1,2 @@
+NAME      TYPE SIZE USED PRIO
+/swap-t10 file   2G   0B   -1

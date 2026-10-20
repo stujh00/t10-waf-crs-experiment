@@ -1,0 +1,24 @@
+{
+  "run_id": "20261020T005958Z-ca99f72b",
+  "started_utc": "2026-10-20T00:59:58.541566+00:00",
+  "cases_sha256": "9404e81f0804d72556fcc06a2909928a6f80d2a65713945517254e7018730aef",
+  "script_sha256": "ff2ce3a781737aa423f02f0373b80944e284564b369a0bd6f947c196eab7ef33",
+  "address": "203.0.113.10",
+  "rounds": 10,
+  "seed": 20261020,
+  "expected_requests": 7200,
+  "connection": "127.0.0.1 through public Nginx ports 80/443",
+  "method": "GET",
+  "curl_version": "curl 8.5.0 (x86_64-pc-linux-gnu) libcurl/8.5.0 OpenSSL/3.0.13 zlib/1.3 brotli/1.1.0 zstd/1.5.5 libidn2/2.3.7 libpsl/0.21.2 (+libidn2/2.3.7) libssh/0.10.6/openssl/zlib nghttp2/1.59.0 librtmp/2.3 OpenLDAP/2.6.10\nRelease-Date: 2023-12-06, security patched: 8.5.0-2ubuntu10.16\nProtocols: dict file ftp ftps gopher gophers http https imap imaps ldap ldaps mqtt pop3 pop3s rtmp rtsp scp sftp smb smbs smtp smtps telnet tftp\nFeatures: alt-svc AsynchDNS brotli GSS-API HSTS HTTP2 HTTPS-proxy IDN IPv6 Kerberos Largefile libz NTLM PSL SPNEGO SSL threadsafe TLS-SRP UnixSockets zstd\n",
+  "recorded_requests": 7200,
+  "needs_review": 0,
+  "finished_utc": "2026-10-20T01:05:42.757750+00:00",
+  "public_copy": {
+    "notice": "Redacted derivative of the private submission, not byte-identical raw evidence.",
+    "endpoint": "203.0.113.10 is a documentation address, not a live endpoint.",
+    "original_script_sha256": "a53a0af765ae2bf0f031fbfdc6b2e42a00303dacc7b32063b685bdc23775cc7f",
+    "original_certificate_sha256": "73f39e81cc85ba48abc0710419f525ae50478c161bc6ec6110d8ff8bff9cdd6c",
+    "certificate_file": "omitted from public copy; certificate hash not reverified here",
+    "outside_main_requests_removed": 37
+  }
+}

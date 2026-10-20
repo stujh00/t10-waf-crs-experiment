@@ -1,0 +1,422 @@
+[
+  {
+    "id": "A001",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "' OR 2=2 -- ",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A002",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "' OR 'x'='x' -- ",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A003",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "admin' OR 'a'='a' -- ",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A004",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "') OR ('a'='a') -- ",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A005",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "1 OR 2=2",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A006",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "1 OR TRUE",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A007",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "1' OR TRUE -- ",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A008",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "1 OR 3>2",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A009",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "1 OR 2 BETWEEN 1 AND 3",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A010",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "1 OR 2 IN (1,2,3)",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A011",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "1 OR 'ab' LIKE 'a%'",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A012",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "1 OR LENGTH('abc')=3",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A013",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "1 OR ASCII('A')=65",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A014",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "1 OR LOWER('ABC')='abc'",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A015",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "1 OR CONCAT('a','b')='ab'",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A016",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "1 UNION SELECT NULL -- ",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A017",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "1 UNION SELECT NULL,NULL -- ",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A018",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "1 UNION SELECT 1,2,3 -- ",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A019",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "' UNION SELECT 'a','b' -- ",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A020",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "1 UNION ALL SELECT 1,2 -- ",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A021",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "1 UNION SELECT database(),user() -- ",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A022",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "1 UNION SELECT table_name FROM information_schema.tables -- ",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A023",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "1 UNION SELECT column_name FROM information_schema.columns -- ",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A024",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "1 UNION SELECT name FROM sqlite_master -- ",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A025",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "1 UNION SELECT version() -- ",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A026",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "1/**/OR/**/2=2",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A027",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "'/**/OR/**/'a'='a'/**/-- ",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A028",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "1/**/UNION/**/SELECT/**/NULL",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A029",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "1 UnIoN SeLeCt NULL,NULL -- ",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A030",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "1 oR 2=2 -- ",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A031",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<script>alert(1)</script>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A032",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<SCRIPT>alert(2)</SCRIPT>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A033",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<script>confirm(1)</script>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A034",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<script>prompt(1)</script>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A035",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<script>console.log(1)</script>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A036",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<img src=x onerror=alert(1)>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A037",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<img src=\"x\" onerror=\"alert(2)\">",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A038",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<IMG SRC=x ONERROR=alert(3)>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A039",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<svg onload=alert(1)>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A040",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<svg onload=\"alert(2)\"></svg>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A041",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<body onload=alert(1)>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A042",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<input autofocus onfocus=alert(1)>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A043",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<textarea autofocus onfocus=alert(1)></textarea>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A044",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<select autofocus onfocus=alert(1)></select>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A045",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<details open ontoggle=alert(1)>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A046",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<video src=x onerror=alert(1)></video>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A047",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<audio src=x onerror=alert(1)></audio>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A048",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<iframe onload=alert(1)></iframe>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A049",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<iframe srcdoc=\"<script>alert(1)</script>\"></iframe>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A050",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<a href=\"javascript:alert(1)\">click</a>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A051",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<a href=javascript:confirm(1)>click</a>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A052",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<form action=\"javascript:alert(1)\"><button>send</button></form>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A053",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<button onclick=\"alert(1)\">click</button>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A054",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<div onmouseover=\"alert(1)\">hover</div>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A055",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<p onclick=\"alert(1)\">click</p>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A056",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<img src=x onerror=\"&#97;lert(1)\">",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A057",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<a href=\"&#106;avascript:alert(1)\">click</a>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A058",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<svg><a href=\"javascript:alert(1)\">click</a></svg>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A059",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<script>alert(String.fromCharCode(88,83,83))</script>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A060",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<script>alert(document.domain)</script>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  }
+]

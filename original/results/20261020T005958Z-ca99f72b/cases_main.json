@@ -1,0 +1,962 @@
+[
+  {
+    "id": "B001",
+    "label": "benign",
+    "category": "ordinary",
+    "base_id": "ordinary-01",
+    "wrapper_language": "ko",
+    "payload": "검색 요청: 배송 예정일을 알려주세요",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B002",
+    "label": "benign",
+    "category": "ordinary",
+    "base_id": "ordinary-01",
+    "wrapper_language": "en",
+    "payload": "Search request: 배송 예정일을 알려주세요",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B003",
+    "label": "benign",
+    "category": "ordinary",
+    "base_id": "ordinary-02",
+    "wrapper_language": "ko",
+    "payload": "검색 요청: 지난달 주문 내역 확인",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B004",
+    "label": "benign",
+    "category": "ordinary",
+    "base_id": "ordinary-02",
+    "wrapper_language": "en",
+    "payload": "Search request: 지난달 주문 내역 확인",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B005",
+    "label": "benign",
+    "category": "ordinary",
+    "base_id": "ordinary-03",
+    "wrapper_language": "ko",
+    "payload": "검색 요청: 비밀번호 변경 방법 안내",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B006",
+    "label": "benign",
+    "category": "ordinary",
+    "base_id": "ordinary-03",
+    "wrapper_language": "en",
+    "payload": "Search request: 비밀번호 변경 방법 안내",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B007",
+    "label": "benign",
+    "category": "ordinary",
+    "base_id": "ordinary-04",
+    "wrapper_language": "ko",
+    "payload": "검색 요청: 회의실 예약 가능 시간",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B008",
+    "label": "benign",
+    "category": "ordinary",
+    "base_id": "ordinary-04",
+    "wrapper_language": "en",
+    "payload": "Search request: 회의실 예약 가능 시간",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B009",
+    "label": "benign",
+    "category": "ordinary",
+    "base_id": "ordinary-05",
+    "wrapper_language": "ko",
+    "payload": "검색 요청: 제품 A와 제품 B 비교",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B010",
+    "label": "benign",
+    "category": "ordinary",
+    "base_id": "ordinary-05",
+    "wrapper_language": "en",
+    "payload": "Search request: 제품 A와 제품 B 비교",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B011",
+    "label": "benign",
+    "category": "ordinary",
+    "base_id": "ordinary-06",
+    "wrapper_language": "ko",
+    "payload": "검색 요청: 문의 번호 2026-1042",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B012",
+    "label": "benign",
+    "category": "ordinary",
+    "base_id": "ordinary-06",
+    "wrapper_language": "en",
+    "payload": "Search request: 문의 번호 2026-1042",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B013",
+    "label": "benign",
+    "category": "ordinary",
+    "base_id": "ordinary-07",
+    "wrapper_language": "ko",
+    "payload": "검색 요청: O'Connor 고객의 예약 확인",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B014",
+    "label": "benign",
+    "category": "ordinary",
+    "base_id": "ordinary-07",
+    "wrapper_language": "en",
+    "payload": "Search request: O'Connor 고객의 예약 확인",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B015",
+    "label": "benign",
+    "category": "ordinary",
+    "base_id": "ordinary-08",
+    "wrapper_language": "ko",
+    "payload": "검색 요청: 가격은 15,000원입니다",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B016",
+    "label": "benign",
+    "category": "ordinary",
+    "base_id": "ordinary-08",
+    "wrapper_language": "en",
+    "payload": "Search request: 가격은 15,000원입니다",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B017",
+    "label": "benign",
+    "category": "ordinary",
+    "base_id": "ordinary-09",
+    "wrapper_language": "ko",
+    "payload": "검색 요청: 매장 운영 시간 09:00~18:00",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B018",
+    "label": "benign",
+    "category": "ordinary",
+    "base_id": "ordinary-09",
+    "wrapper_language": "en",
+    "payload": "Search request: 매장 운영 시간 09:00~18:00",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B019",
+    "label": "benign",
+    "category": "ordinary",
+    "base_id": "ordinary-10",
+    "wrapper_language": "ko",
+    "payload": "검색 요청: 연락처 user@example.com",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B020",
+    "label": "benign",
+    "category": "ordinary",
+    "base_id": "ordinary-10",
+    "wrapper_language": "en",
+    "payload": "Search request: 연락처 user@example.com",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B021",
+    "label": "benign",
+    "category": "html_example",
+    "base_id": "html_example-01",
+    "wrapper_language": "ko",
+    "payload": "다음 코드를 문자로 설명하는 문서입니다: <h2>Introduction</h2>",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B022",
+    "label": "benign",
+    "category": "html_example",
+    "base_id": "html_example-01",
+    "wrapper_language": "en",
+    "payload": "Documentation showing this code as literal text: <h2>Introduction</h2>",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B023",
+    "label": "benign",
+    "category": "html_example",
+    "base_id": "html_example-02",
+    "wrapper_language": "ko",
+    "payload": "다음 코드를 문자로 설명하는 문서입니다: <p>First paragraph</p>",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B024",
+    "label": "benign",
+    "category": "html_example",
+    "base_id": "html_example-02",
+    "wrapper_language": "en",
+    "payload": "Documentation showing this code as literal text: <p>First paragraph</p>",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B025",
+    "label": "benign",
+    "category": "html_example",
+    "base_id": "html_example-03",
+    "wrapper_language": "ko",
+    "payload": "다음 코드를 문자로 설명하는 문서입니다: <strong>Important notice</strong>",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B026",
+    "label": "benign",
+    "category": "html_example",
+    "base_id": "html_example-03",
+    "wrapper_language": "en",
+    "payload": "Documentation showing this code as literal text: <strong>Important notice</strong>",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B027",
+    "label": "benign",
+    "category": "html_example",
+    "base_id": "html_example-04",
+    "wrapper_language": "ko",
+    "payload": "다음 코드를 문자로 설명하는 문서입니다: <em>Example sentence</em>",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B028",
+    "label": "benign",
+    "category": "html_example",
+    "base_id": "html_example-04",
+    "wrapper_language": "en",
+    "payload": "Documentation showing this code as literal text: <em>Example sentence</em>",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B029",
+    "label": "benign",
+    "category": "html_example",
+    "base_id": "html_example-05",
+    "wrapper_language": "ko",
+    "payload": "다음 코드를 문자로 설명하는 문서입니다: <ul><li>Apple</li></ul>",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B030",
+    "label": "benign",
+    "category": "html_example",
+    "base_id": "html_example-05",
+    "wrapper_language": "en",
+    "payload": "Documentation showing this code as literal text: <ul><li>Apple</li></ul>",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B031",
+    "label": "benign",
+    "category": "html_example",
+    "base_id": "html_example-06",
+    "wrapper_language": "ko",
+    "payload": "다음 코드를 문자로 설명하는 문서입니다: <ol><li>First step</li></ol>",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B032",
+    "label": "benign",
+    "category": "html_example",
+    "base_id": "html_example-06",
+    "wrapper_language": "en",
+    "payload": "Documentation showing this code as literal text: <ol><li>First step</li></ol>",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B033",
+    "label": "benign",
+    "category": "html_example",
+    "base_id": "html_example-07",
+    "wrapper_language": "ko",
+    "payload": "다음 코드를 문자로 설명하는 문서입니다: <table><tr><td>Item</td></tr></table>",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B034",
+    "label": "benign",
+    "category": "html_example",
+    "base_id": "html_example-07",
+    "wrapper_language": "en",
+    "payload": "Documentation showing this code as literal text: <table><tr><td>Item</td></tr></table>",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B035",
+    "label": "benign",
+    "category": "html_example",
+    "base_id": "html_example-08",
+    "wrapper_language": "ko",
+    "payload": "다음 코드를 문자로 설명하는 문서입니다: <a href=\"/guide\">User guide</a>",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B036",
+    "label": "benign",
+    "category": "html_example",
+    "base_id": "html_example-08",
+    "wrapper_language": "en",
+    "payload": "Documentation showing this code as literal text: <a href=\"/guide\">User guide</a>",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B037",
+    "label": "benign",
+    "category": "html_example",
+    "base_id": "html_example-09",
+    "wrapper_language": "ko",
+    "payload": "다음 코드를 문자로 설명하는 문서입니다: <img src=\"/sample.png\" alt=\"Example\">",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B038",
+    "label": "benign",
+    "category": "html_example",
+    "base_id": "html_example-09",
+    "wrapper_language": "en",
+    "payload": "Documentation showing this code as literal text: <img src=\"/sample.png\" alt=\"Example\">",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B039",
+    "label": "benign",
+    "category": "html_example",
+    "base_id": "html_example-10",
+    "wrapper_language": "ko",
+    "payload": "다음 코드를 문자로 설명하는 문서입니다: <blockquote>Quoted sentence</blockquote>",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B040",
+    "label": "benign",
+    "category": "html_example",
+    "base_id": "html_example-10",
+    "wrapper_language": "en",
+    "payload": "Documentation showing this code as literal text: <blockquote>Quoted sentence</blockquote>",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B041",
+    "label": "benign",
+    "category": "technical_example",
+    "base_id": "technical_example-01",
+    "wrapper_language": "ko",
+    "payload": "다음 코드를 문자로 설명하는 문서입니다: SELECT product_name FROM products;",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B042",
+    "label": "benign",
+    "category": "technical_example",
+    "base_id": "technical_example-01",
+    "wrapper_language": "en",
+    "payload": "Documentation showing this code as literal text: SELECT product_name FROM products;",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B043",
+    "label": "benign",
+    "category": "technical_example",
+    "base_id": "technical_example-02",
+    "wrapper_language": "ko",
+    "payload": "다음 코드를 문자로 설명하는 문서입니다: SELECT COUNT(*) FROM orders;",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B044",
+    "label": "benign",
+    "category": "technical_example",
+    "base_id": "technical_example-02",
+    "wrapper_language": "en",
+    "payload": "Documentation showing this code as literal text: SELECT COUNT(*) FROM orders;",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B045",
+    "label": "benign",
+    "category": "technical_example",
+    "base_id": "technical_example-03",
+    "wrapper_language": "ko",
+    "payload": "다음 코드를 문자로 설명하는 문서입니다: SELECT name FROM users WHERE id = 7;",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B046",
+    "label": "benign",
+    "category": "technical_example",
+    "base_id": "technical_example-03",
+    "wrapper_language": "en",
+    "payload": "Documentation showing this code as literal text: SELECT name FROM users WHERE id = 7;",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B047",
+    "label": "benign",
+    "category": "technical_example",
+    "base_id": "technical_example-04",
+    "wrapper_language": "ko",
+    "payload": "다음 코드를 문자로 설명하는 문서입니다: SELECT category, COUNT(*) FROM products GROUP BY category;",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B048",
+    "label": "benign",
+    "category": "technical_example",
+    "base_id": "technical_example-04",
+    "wrapper_language": "en",
+    "payload": "Documentation showing this code as literal text: SELECT category, COUNT(*) FROM products GROUP BY category;",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B049",
+    "label": "benign",
+    "category": "technical_example",
+    "base_id": "technical_example-05",
+    "wrapper_language": "ko",
+    "payload": "다음 코드를 문자로 설명하는 문서입니다: SELECT name FROM products ORDER BY name;",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B050",
+    "label": "benign",
+    "category": "technical_example",
+    "base_id": "technical_example-05",
+    "wrapper_language": "en",
+    "payload": "Documentation showing this code as literal text: SELECT name FROM products ORDER BY name;",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B051",
+    "label": "benign",
+    "category": "technical_example",
+    "base_id": "technical_example-06",
+    "wrapper_language": "ko",
+    "payload": "다음 코드를 문자로 설명하는 문서입니다: INSERT INTO products (name) VALUES ('Notebook');",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B052",
+    "label": "benign",
+    "category": "technical_example",
+    "base_id": "technical_example-06",
+    "wrapper_language": "en",
+    "payload": "Documentation showing this code as literal text: INSERT INTO products (name) VALUES ('Notebook');",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B053",
+    "label": "benign",
+    "category": "technical_example",
+    "base_id": "technical_example-07",
+    "wrapper_language": "ko",
+    "payload": "다음 코드를 문자로 설명하는 문서입니다: UPDATE products SET name = 'Pen' WHERE id = 7;",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B054",
+    "label": "benign",
+    "category": "technical_example",
+    "base_id": "technical_example-07",
+    "wrapper_language": "en",
+    "payload": "Documentation showing this code as literal text: UPDATE products SET name = 'Pen' WHERE id = 7;",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B055",
+    "label": "benign",
+    "category": "technical_example",
+    "base_id": "technical_example-08",
+    "wrapper_language": "ko",
+    "payload": "다음 코드를 문자로 설명하는 문서입니다: CREATE TABLE sample (id INT, name VARCHAR(40));",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B056",
+    "label": "benign",
+    "category": "technical_example",
+    "base_id": "technical_example-08",
+    "wrapper_language": "en",
+    "payload": "Documentation showing this code as literal text: CREATE TABLE sample (id INT, name VARCHAR(40));",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B057",
+    "label": "benign",
+    "category": "technical_example",
+    "base_id": "technical_example-09",
+    "wrapper_language": "ko",
+    "payload": "다음 코드를 문자로 설명하는 문서입니다: if (count > 0) { print(\"available\"); }",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B058",
+    "label": "benign",
+    "category": "technical_example",
+    "base_id": "technical_example-09",
+    "wrapper_language": "en",
+    "payload": "Documentation showing this code as literal text: if (count > 0) { print(\"available\"); }",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B059",
+    "label": "benign",
+    "category": "technical_example",
+    "base_id": "technical_example-10",
+    "wrapper_language": "ko",
+    "payload": "다음 코드를 문자로 설명하는 문서입니다: result = items[1:4]",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B060",
+    "label": "benign",
+    "category": "technical_example",
+    "base_id": "technical_example-10",
+    "wrapper_language": "en",
+    "payload": "Documentation showing this code as literal text: result = items[1:4]",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "A001",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "' OR 2=2 -- ",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A002",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "' OR 'x'='x' -- ",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A003",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "admin' OR 'a'='a' -- ",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A004",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "') OR ('a'='a') -- ",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A005",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "1 OR 2=2",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A006",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "1 OR TRUE",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A007",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "1' OR TRUE -- ",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A008",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "1 OR 3>2",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A009",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "1 OR 2 BETWEEN 1 AND 3",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A010",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "1 OR 2 IN (1,2,3)",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A011",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "1 OR 'ab' LIKE 'a%'",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A012",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "1 OR LENGTH('abc')=3",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A013",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "1 OR ASCII('A')=65",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A014",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "1 OR LOWER('ABC')='abc'",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A015",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "1 OR CONCAT('a','b')='ab'",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A016",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "1 UNION SELECT NULL -- ",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A017",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "1 UNION SELECT NULL,NULL -- ",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A018",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "1 UNION SELECT 1,2,3 -- ",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A019",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "' UNION SELECT 'a','b' -- ",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A020",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "1 UNION ALL SELECT 1,2 -- ",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A021",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "1 UNION SELECT database(),user() -- ",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A022",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "1 UNION SELECT table_name FROM information_schema.tables -- ",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A023",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "1 UNION SELECT column_name FROM information_schema.columns -- ",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A024",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "1 UNION SELECT name FROM sqlite_master -- ",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A025",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "1 UNION SELECT version() -- ",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A026",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "1/**/OR/**/2=2",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A027",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "'/**/OR/**/'a'='a'/**/-- ",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A028",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "1/**/UNION/**/SELECT/**/NULL",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A029",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "1 UnIoN SeLeCt NULL,NULL -- ",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A030",
+    "label": "attack",
+    "category": "sqli",
+    "payload": "1 oR 2=2 -- ",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A031",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<script>alert(1)</script>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A032",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<SCRIPT>alert(2)</SCRIPT>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A033",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<script>confirm(1)</script>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A034",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<script>prompt(1)</script>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A035",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<script>console.log(1)</script>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A036",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<img src=x onerror=alert(1)>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A037",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<img src=\"x\" onerror=\"alert(2)\">",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A038",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<IMG SRC=x ONERROR=alert(3)>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A039",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<svg onload=alert(1)>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A040",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<svg onload=\"alert(2)\"></svg>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A041",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<body onload=alert(1)>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A042",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<input autofocus onfocus=alert(1)>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A043",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<textarea autofocus onfocus=alert(1)></textarea>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A044",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<select autofocus onfocus=alert(1)></select>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A045",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<details open ontoggle=alert(1)>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A046",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<video src=x onerror=alert(1)></video>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A047",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<audio src=x onerror=alert(1)></audio>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A048",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<iframe onload=alert(1)></iframe>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A049",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<iframe srcdoc=\"<script>alert(1)</script>\"></iframe>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A050",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<a href=\"javascript:alert(1)\">click</a>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A051",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<a href=javascript:confirm(1)>click</a>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A052",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<form action=\"javascript:alert(1)\"><button>send</button></form>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A053",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<button onclick=\"alert(1)\">click</button>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A054",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<div onmouseover=\"alert(1)\">hover</div>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A055",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<p onclick=\"alert(1)\">click</p>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A056",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<img src=x onerror=\"&#97;lert(1)\">",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A057",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<a href=\"&#106;avascript:alert(1)\">click</a>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A058",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<svg><a href=\"javascript:alert(1)\">click</a></svg>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A059",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<script>alert(String.fromCharCode(88,83,83))</script>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  },
+  {
+    "id": "A060",
+    "label": "attack",
+    "category": "xss",
+    "payload": "<script>alert(document.domain)</script>",
+    "reason": "Attack-pattern test; exploit success is not established"
+  }
+]

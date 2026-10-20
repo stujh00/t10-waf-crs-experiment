@@ -1,0 +1,24 @@
+{
+  "original_zip_sha256": "37a59be0ae1295cca3ca2f19cdcb1af6d364f11d5dc7ec43fa243cca3d84d832",
+  "public_audit_counts": {
+    "t10-pl2-audit.jsonl": {
+      "kept": 2400,
+      "removed_outside_main": 10
+    },
+    "t10-pl1-audit.jsonl": {
+      "kept": 2400,
+      "removed_outside_main": 16
+    },
+    "t10-pl3-audit.jsonl": {
+      "kept": 2400,
+      "removed_outside_main": 11
+    }
+  },
+  "main_response_count": 7200,
+  "certificate_omitted": true,
+  "vendor_rules_omitted": true,
+  "address_mapping": "Actual server endpoints replaced by RFC 5737 documentation IPv4; original mapping not published.",
+  "hostname_mapping": "Internal hostname replaced by t10-lab-host.",
+  "server_id_mapping": "Opaque server identifier replaced by t10-public-lab.",
+  "numeric_results_preserved": true
+}

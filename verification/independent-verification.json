@@ -1,0 +1,20 @@
+{
+  "public_derivative": true,
+  "certificate_verified": false,
+  "hash_files": 30,
+  "requests": 7200,
+  "audit_matched": 7200,
+  "coverage_combinations": 7200,
+  "paired_http_https": 3600,
+  "paired_differences": 0,
+  "repeat_changed": 0,
+  "invalid_utf8_lines": {
+    "1": 20,
+    "2": 80,
+    "3": 780
+  },
+  "json_parse_errors": {},
+  "input_cases": 120,
+  "issues": [],
+  "passed": true
+}

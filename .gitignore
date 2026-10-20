@@ -1,0 +1,10 @@
+*.ppk
+*.pem
+*.key
+.env
+.env.*
+!.env.example
+__pycache__/
+*.pyc
+verification-output/
+*.zip

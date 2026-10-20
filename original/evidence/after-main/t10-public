@@ -1,0 +1,46 @@
+
+server {
+    listen 80 default_server;
+    listen 443 ssl default_server;
+    ssl_certificate /etc/nginx/t10/tls/server.crt;
+    ssl_certificate_key /etc/nginx/t10/tls/server.key;
+    ssl_protocols TLSv1.2 TLSv1.3;
+    server_name _;
+    root /var/www/t10;
+    index index.html;
+    client_max_body_size 1m;
+
+    location = / {
+        try_files /index.html =404;
+    }
+
+    error_page 403 /blocked.html;
+    location = /blocked.html {
+        internal;
+    }
+
+    location /pl1/ {
+        proxy_pass http://127.0.0.1:18081/;
+        proxy_set_header Host lab.example.test;
+        proxy_set_header Connection "";
+        proxy_intercept_errors on;
+    }
+
+    location /pl2/ {
+        proxy_pass http://127.0.0.1:18082/;
+        proxy_set_header Host lab.example.test;
+        proxy_set_header Connection "";
+        proxy_intercept_errors on;
+    }
+
+    location /pl3/ {
+        proxy_pass http://127.0.0.1:18083/;
+        proxy_set_header Host lab.example.test;
+        proxy_set_header Connection "";
+        proxy_intercept_errors on;
+    }
+
+    location / {
+        return 404;
+    }
+}

@@ -1,0 +1,119 @@
+﻿scheme,pl,category,rule_id,blocked_requests_with_rule,message
+http,1,html_example,941160,20,NoScript XSS InjectionChecker: HTML Injection
+http,1,technical_example,932370,20,Remote Command Execution: Windows Command Injection
+http,1,technical_example,942230,20,Detects conditional SQL injection attempts
+http,1,technical_example,942360,80,Detects concatenated basic SQL injection and SQLLFI attempts
+http,2,html_example,941150,40,XSS Filter - Category 5: Disallowed HTML Attributes
+http,2,html_example,941160,20,NoScript XSS InjectionChecker: HTML Injection
+http,2,html_example,941320,180,Possible XSS Attack Detected - HTML Tag Handler
+http,2,html_example,941340,20,IE XSS Filters - Attack Detected
+http,2,html_example,942131,180,SQL Injection Attack: SQL Boolean-based attack detected
+http,2,html_example,942430,20,Restricted SQL Character Anomaly Detection (args): # of special characters exceeded (12)
+http,2,html_example,942520,40,Detects basic SQL authentication bypass attempts 4.0/4
+http,2,technical_example,932240,20,Remote Command Execution: Unix Command Injection evasion attempt detected
+http,2,technical_example,932370,20,Remote Command Execution: Windows Command Injection
+http,2,technical_example,942131,20,SQL Injection Attack: SQL Boolean-based attack detected
+http,2,technical_example,942150,80,SQL Injection Attack: SQL function name detected
+http,2,technical_example,942180,40,Detects basic SQL authentication bypass attempts 1/3
+http,2,technical_example,942200,100,Detects MySQL comment-/space-obfuscated injections and backtick termination
+http,2,technical_example,942230,20,Detects conditional SQL injection attempts
+http,2,technical_example,942260,60,Detects basic SQL authentication bypass attempts 2/3
+http,2,technical_example,942360,80,Detects concatenated basic SQL injection and SQLLFI attempts
+http,2,technical_example,942362,80,Detects concatenated basic SQL injection and SQLLFI attempts
+http,2,technical_example,942380,40,SQL Injection Attack
+http,2,technical_example,942410,80,SQL Injection Attack
+http,2,technical_example,942430,10,Restricted SQL Character Anomaly Detection (args): # of special characters exceeded (12)
+http,2,technical_example,942470,20,SQL Injection Attack
+http,2,technical_example,942480,80,SQL Injection Attack
+http,3,html_example,920272,100,Invalid character in request (outside of printable chars below ascii 127)
+http,3,html_example,941150,40,XSS Filter - Category 5: Disallowed HTML Attributes
+http,3,html_example,941160,20,NoScript XSS InjectionChecker: HTML Injection
+http,3,html_example,941320,180,Possible XSS Attack Detected - HTML Tag Handler
+http,3,html_example,941340,20,IE XSS Filters - Attack Detected
+http,3,html_example,942131,180,SQL Injection Attack: SQL Boolean-based attack detected
+http,3,html_example,942430,20,Restricted SQL Character Anomaly Detection (args): # of special characters exceeded (12)
+http,3,html_example,942431,150,Restricted SQL Character Anomaly Detection (args): # of special characters exceeded (6)
+http,3,html_example,942460,100,Meta-Character Anomaly Detection Alert - Repetitive Non-Word Characters
+http,3,html_example,942520,40,Detects basic SQL authentication bypass attempts 4.0/4
+http,3,ordinary,920272,200,Invalid character in request (outside of printable chars below ascii 127)
+http,3,ordinary,942431,40,Restricted SQL Character Anomaly Detection (args): # of special characters exceeded (6)
+http,3,ordinary,942460,200,Meta-Character Anomaly Detection Alert - Repetitive Non-Word Characters
+http,3,technical_example,920272,100,Invalid character in request (outside of printable chars below ascii 127)
+http,3,technical_example,932240,20,Remote Command Execution: Unix Command Injection evasion attempt detected
+http,3,technical_example,932370,20,Remote Command Execution: Windows Command Injection
+http,3,technical_example,933161,40,PHP Injection Attack: Low-Value PHP Function Call Found
+http,3,technical_example,942131,20,SQL Injection Attack: SQL Boolean-based attack detected
+http,3,technical_example,942150,80,SQL Injection Attack: SQL function name detected
+http,3,technical_example,942180,40,Detects basic SQL authentication bypass attempts 1/3
+http,3,technical_example,942200,100,Detects MySQL comment-/space-obfuscated injections and backtick termination
+http,3,technical_example,942230,20,Detects conditional SQL injection attempts
+http,3,technical_example,942260,60,Detects basic SQL authentication bypass attempts 2/3
+http,3,technical_example,942360,80,Detects concatenated basic SQL injection and SQLLFI attempts
+http,3,technical_example,942362,80,Detects concatenated basic SQL injection and SQLLFI attempts
+http,3,technical_example,942380,40,SQL Injection Attack
+http,3,technical_example,942410,80,SQL Injection Attack
+http,3,technical_example,942430,10,Restricted SQL Character Anomaly Detection (args): # of special characters exceeded (12)
+http,3,technical_example,942431,110,Restricted SQL Character Anomaly Detection (args): # of special characters exceeded (6)
+http,3,technical_example,942460,140,Meta-Character Anomaly Detection Alert - Repetitive Non-Word Characters
+http,3,technical_example,942470,20,SQL Injection Attack
+http,3,technical_example,942480,80,SQL Injection Attack
+http,3,technical_example,942511,40,SQLi bypass attempt by ticks detected
+https,1,html_example,941160,20,NoScript XSS InjectionChecker: HTML Injection
+https,1,technical_example,932370,20,Remote Command Execution: Windows Command Injection
+https,1,technical_example,942230,20,Detects conditional SQL injection attempts
+https,1,technical_example,942360,80,Detects concatenated basic SQL injection and SQLLFI attempts
+https,2,html_example,941150,40,XSS Filter - Category 5: Disallowed HTML Attributes
+https,2,html_example,941160,20,NoScript XSS InjectionChecker: HTML Injection
+https,2,html_example,941320,180,Possible XSS Attack Detected - HTML Tag Handler
+https,2,html_example,941340,20,IE XSS Filters - Attack Detected
+https,2,html_example,942131,180,SQL Injection Attack: SQL Boolean-based attack detected
+https,2,html_example,942430,20,Restricted SQL Character Anomaly Detection (args): # of special characters exceeded (12)
+https,2,html_example,942520,40,Detects basic SQL authentication bypass attempts 4.0/4
+https,2,technical_example,932240,20,Remote Command Execution: Unix Command Injection evasion attempt detected
+https,2,technical_example,932370,20,Remote Command Execution: Windows Command Injection
+https,2,technical_example,942131,20,SQL Injection Attack: SQL Boolean-based attack detected
+https,2,technical_example,942150,80,SQL Injection Attack: SQL function name detected
+https,2,technical_example,942180,40,Detects basic SQL authentication bypass attempts 1/3
+https,2,technical_example,942200,100,Detects MySQL comment-/space-obfuscated injections and backtick termination
+https,2,technical_example,942230,20,Detects conditional SQL injection attempts
+https,2,technical_example,942260,60,Detects basic SQL authentication bypass attempts 2/3
+https,2,technical_example,942360,80,Detects concatenated basic SQL injection and SQLLFI attempts
+https,2,technical_example,942362,80,Detects concatenated basic SQL injection and SQLLFI attempts
+https,2,technical_example,942380,40,SQL Injection Attack
+https,2,technical_example,942410,80,SQL Injection Attack
+https,2,technical_example,942430,10,Restricted SQL Character Anomaly Detection (args): # of special characters exceeded (12)
+https,2,technical_example,942470,20,SQL Injection Attack
+https,2,technical_example,942480,80,SQL Injection Attack
+https,3,html_example,920272,100,Invalid character in request (outside of printable chars below ascii 127)
+https,3,html_example,941150,40,XSS Filter - Category 5: Disallowed HTML Attributes
+https,3,html_example,941160,20,NoScript XSS InjectionChecker: HTML Injection
+https,3,html_example,941320,180,Possible XSS Attack Detected - HTML Tag Handler
+https,3,html_example,941340,20,IE XSS Filters - Attack Detected
+https,3,html_example,942131,180,SQL Injection Attack: SQL Boolean-based attack detected
+https,3,html_example,942430,20,Restricted SQL Character Anomaly Detection (args): # of special characters exceeded (12)
+https,3,html_example,942431,150,Restricted SQL Character Anomaly Detection (args): # of special characters exceeded (6)
+https,3,html_example,942460,100,Meta-Character Anomaly Detection Alert - Repetitive Non-Word Characters
+https,3,html_example,942520,40,Detects basic SQL authentication bypass attempts 4.0/4
+https,3,ordinary,920272,200,Invalid character in request (outside of printable chars below ascii 127)
+https,3,ordinary,942431,40,Restricted SQL Character Anomaly Detection (args): # of special characters exceeded (6)
+https,3,ordinary,942460,200,Meta-Character Anomaly Detection Alert - Repetitive Non-Word Characters
+https,3,technical_example,920272,100,Invalid character in request (outside of printable chars below ascii 127)
+https,3,technical_example,932240,20,Remote Command Execution: Unix Command Injection evasion attempt detected
+https,3,technical_example,932370,20,Remote Command Execution: Windows Command Injection
+https,3,technical_example,933161,40,PHP Injection Attack: Low-Value PHP Function Call Found
+https,3,technical_example,942131,20,SQL Injection Attack: SQL Boolean-based attack detected
+https,3,technical_example,942150,80,SQL Injection Attack: SQL function name detected
+https,3,technical_example,942180,40,Detects basic SQL authentication bypass attempts 1/3
+https,3,technical_example,942200,100,Detects MySQL comment-/space-obfuscated injections and backtick termination
+https,3,technical_example,942230,20,Detects conditional SQL injection attempts
+https,3,technical_example,942260,60,Detects basic SQL authentication bypass attempts 2/3
+https,3,technical_example,942360,80,Detects concatenated basic SQL injection and SQLLFI attempts
+https,3,technical_example,942362,80,Detects concatenated basic SQL injection and SQLLFI attempts
+https,3,technical_example,942380,40,SQL Injection Attack
+https,3,technical_example,942410,80,SQL Injection Attack
+https,3,technical_example,942430,10,Restricted SQL Character Anomaly Detection (args): # of special characters exceeded (12)
+https,3,technical_example,942431,110,Restricted SQL Character Anomaly Detection (args): # of special characters exceeded (6)
+https,3,technical_example,942460,140,Meta-Character Anomaly Detection Alert - Repetitive Non-Word Characters
+https,3,technical_example,942470,20,SQL Injection Attack
+https,3,technical_example,942480,80,SQL Injection Attack
+https,3,technical_example,942511,40,SQLi bypass attempt by ticks detected

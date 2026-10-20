@@ -1,0 +1,721 @@
+﻿scheme,pl,case_id,label,category,payload,total_requests,allowed_200,blocked_403,status_changed
+http,1,A001,attack,sqli,' OR 2=2 -- ,10,0,10,False
+http,1,A002,attack,sqli,' OR 'x'='x' -- ,10,0,10,False
+http,1,A003,attack,sqli,admin' OR 'a'='a' -- ,10,0,10,False
+http,1,A004,attack,sqli,') OR ('a'='a') -- ,10,0,10,False
+http,1,A005,attack,sqli,1 OR 2=2,10,0,10,False
+http,1,A006,attack,sqli,1 OR TRUE,10,10,0,False
+http,1,A007,attack,sqli,1' OR TRUE -- ,10,0,10,False
+http,1,A008,attack,sqli,1 OR 3>2,10,0,10,False
+http,1,A009,attack,sqli,1 OR 2 BETWEEN 1 AND 3,10,0,10,False
+http,1,A010,attack,sqli,"1 OR 2 IN (1,2,3)",10,0,10,False
+http,1,A011,attack,sqli,1 OR 'ab' LIKE 'a%',10,0,10,False
+http,1,A012,attack,sqli,1 OR LENGTH('abc')=3,10,0,10,False
+http,1,A013,attack,sqli,1 OR ASCII('A')=65,10,0,10,False
+http,1,A014,attack,sqli,1 OR LOWER('ABC')='abc',10,0,10,False
+http,1,A015,attack,sqli,"1 OR CONCAT('a','b')='ab'",10,0,10,False
+http,1,A016,attack,sqli,1 UNION SELECT NULL -- ,10,0,10,False
+http,1,A017,attack,sqli,"1 UNION SELECT NULL,NULL -- ",10,0,10,False
+http,1,A018,attack,sqli,"1 UNION SELECT 1,2,3 -- ",10,0,10,False
+http,1,A019,attack,sqli,"' UNION SELECT 'a','b' -- ",10,0,10,False
+http,1,A020,attack,sqli,"1 UNION ALL SELECT 1,2 -- ",10,0,10,False
+http,1,A021,attack,sqli,"1 UNION SELECT database(),user() -- ",10,0,10,False
+http,1,A022,attack,sqli,1 UNION SELECT table_name FROM information_schema.tables -- ,10,0,10,False
+http,1,A023,attack,sqli,1 UNION SELECT column_name FROM information_schema.columns -- ,10,0,10,False
+http,1,A024,attack,sqli,1 UNION SELECT name FROM sqlite_master -- ,10,0,10,False
+http,1,A025,attack,sqli,1 UNION SELECT version() -- ,10,0,10,False
+http,1,A026,attack,sqli,1/**/OR/**/2=2,10,0,10,False
+http,1,A027,attack,sqli,'/**/OR/**/'a'='a'/**/-- ,10,0,10,False
+http,1,A028,attack,sqli,1/**/UNION/**/SELECT/**/NULL,10,0,10,False
+http,1,A029,attack,sqli,"1 UnIoN SeLeCt NULL,NULL -- ",10,0,10,False
+http,1,A030,attack,sqli,1 oR 2=2 -- ,10,0,10,False
+http,1,A031,attack,xss,<script>alert(1)</script>,10,0,10,False
+http,1,A032,attack,xss,<SCRIPT>alert(2)</SCRIPT>,10,0,10,False
+http,1,A033,attack,xss,<script>confirm(1)</script>,10,0,10,False
+http,1,A034,attack,xss,<script>prompt(1)</script>,10,0,10,False
+http,1,A035,attack,xss,<script>console.log(1)</script>,10,0,10,False
+http,1,A036,attack,xss,<img src=x onerror=alert(1)>,10,0,10,False
+http,1,A037,attack,xss,"<img src=""x"" onerror=""alert(2)"">",10,0,10,False
+http,1,A038,attack,xss,<IMG SRC=x ONERROR=alert(3)>,10,0,10,False
+http,1,A039,attack,xss,<svg onload=alert(1)>,10,0,10,False
+http,1,A040,attack,xss,"<svg onload=""alert(2)""></svg>",10,0,10,False
+http,1,A041,attack,xss,<body onload=alert(1)>,10,0,10,False
+http,1,A042,attack,xss,<input autofocus onfocus=alert(1)>,10,0,10,False
+http,1,A043,attack,xss,<textarea autofocus onfocus=alert(1)></textarea>,10,0,10,False
+http,1,A044,attack,xss,<select autofocus onfocus=alert(1)></select>,10,0,10,False
+http,1,A045,attack,xss,<details open ontoggle=alert(1)>,10,0,10,False
+http,1,A046,attack,xss,<video src=x onerror=alert(1)></video>,10,0,10,False
+http,1,A047,attack,xss,<audio src=x onerror=alert(1)></audio>,10,0,10,False
+http,1,A048,attack,xss,<iframe onload=alert(1)></iframe>,10,0,10,False
+http,1,A049,attack,xss,"<iframe srcdoc=""<script>alert(1)</script>""></iframe>",10,0,10,False
+http,1,A050,attack,xss,"<a href=""javascript:alert(1)"">click</a>",10,0,10,False
+http,1,A051,attack,xss,<a href=javascript:confirm(1)>click</a>,10,0,10,False
+http,1,A052,attack,xss,"<form action=""javascript:alert(1)""><button>send</button></form>",10,0,10,False
+http,1,A053,attack,xss,"<button onclick=""alert(1)"">click</button>",10,0,10,False
+http,1,A054,attack,xss,"<div onmouseover=""alert(1)"">hover</div>",10,0,10,False
+http,1,A055,attack,xss,"<p onclick=""alert(1)"">click</p>",10,0,10,False
+http,1,A056,attack,xss,"<img src=x onerror=""&#97;lert(1)"">",10,0,10,False
+http,1,A057,attack,xss,"<a href=""&#106;avascript:alert(1)"">click</a>",10,0,10,False
+http,1,A058,attack,xss,"<svg><a href=""javascript:alert(1)"">click</a></svg>",10,0,10,False
+http,1,A059,attack,xss,"<script>alert(String.fromCharCode(88,83,83))</script>",10,0,10,False
+http,1,A060,attack,xss,<script>alert(document.domain)</script>,10,0,10,False
+http,1,B001,benign,ordinary,검색 요청: 배송 예정일을 알려주세요,10,10,0,False
+http,1,B002,benign,ordinary,Search request: 배송 예정일을 알려주세요,10,10,0,False
+http,1,B003,benign,ordinary,검색 요청: 지난달 주문 내역 확인,10,10,0,False
+http,1,B004,benign,ordinary,Search request: 지난달 주문 내역 확인,10,10,0,False
+http,1,B005,benign,ordinary,검색 요청: 비밀번호 변경 방법 안내,10,10,0,False
+http,1,B006,benign,ordinary,Search request: 비밀번호 변경 방법 안내,10,10,0,False
+http,1,B007,benign,ordinary,검색 요청: 회의실 예약 가능 시간,10,10,0,False
+http,1,B008,benign,ordinary,Search request: 회의실 예약 가능 시간,10,10,0,False
+http,1,B009,benign,ordinary,검색 요청: 제품 A와 제품 B 비교,10,10,0,False
+http,1,B010,benign,ordinary,Search request: 제품 A와 제품 B 비교,10,10,0,False
+http,1,B011,benign,ordinary,검색 요청: 문의 번호 2026-1042,10,10,0,False
+http,1,B012,benign,ordinary,Search request: 문의 번호 2026-1042,10,10,0,False
+http,1,B013,benign,ordinary,검색 요청: O'Connor 고객의 예약 확인,10,10,0,False
+http,1,B014,benign,ordinary,Search request: O'Connor 고객의 예약 확인,10,10,0,False
+http,1,B015,benign,ordinary,"검색 요청: 가격은 15,000원입니다",10,10,0,False
+http,1,B016,benign,ordinary,"Search request: 가격은 15,000원입니다",10,10,0,False
+http,1,B017,benign,ordinary,검색 요청: 매장 운영 시간 09:00~18:00,10,10,0,False
+http,1,B018,benign,ordinary,Search request: 매장 운영 시간 09:00~18:00,10,10,0,False
+http,1,B019,benign,ordinary,검색 요청: 연락처 user@example.com,10,10,0,False
+http,1,B020,benign,ordinary,Search request: 연락처 user@example.com,10,10,0,False
+http,1,B021,benign,html_example,다음 코드를 문자로 설명하는 문서입니다: <h2>Introduction</h2>,10,10,0,False
+http,1,B022,benign,html_example,Documentation showing this code as literal text: <h2>Introduction</h2>,10,10,0,False
+http,1,B023,benign,html_example,다음 코드를 문자로 설명하는 문서입니다: <p>First paragraph</p>,10,10,0,False
+http,1,B024,benign,html_example,Documentation showing this code as literal text: <p>First paragraph</p>,10,10,0,False
+http,1,B025,benign,html_example,다음 코드를 문자로 설명하는 문서입니다: <strong>Important notice</strong>,10,10,0,False
+http,1,B026,benign,html_example,Documentation showing this code as literal text: <strong>Important notice</strong>,10,10,0,False
+http,1,B027,benign,html_example,다음 코드를 문자로 설명하는 문서입니다: <em>Example sentence</em>,10,10,0,False
+http,1,B028,benign,html_example,Documentation showing this code as literal text: <em>Example sentence</em>,10,10,0,False
+http,1,B029,benign,html_example,다음 코드를 문자로 설명하는 문서입니다: <ul><li>Apple</li></ul>,10,10,0,False
+http,1,B030,benign,html_example,Documentation showing this code as literal text: <ul><li>Apple</li></ul>,10,10,0,False
+http,1,B031,benign,html_example,다음 코드를 문자로 설명하는 문서입니다: <ol><li>First step</li></ol>,10,10,0,False
+http,1,B032,benign,html_example,Documentation showing this code as literal text: <ol><li>First step</li></ol>,10,10,0,False
+http,1,B033,benign,html_example,다음 코드를 문자로 설명하는 문서입니다: <table><tr><td>Item</td></tr></table>,10,10,0,False
+http,1,B034,benign,html_example,Documentation showing this code as literal text: <table><tr><td>Item</td></tr></table>,10,10,0,False
+http,1,B035,benign,html_example,"다음 코드를 문자로 설명하는 문서입니다: <a href=""/guide"">User guide</a>",10,10,0,False
+http,1,B036,benign,html_example,"Documentation showing this code as literal text: <a href=""/guide"">User guide</a>",10,10,0,False
+http,1,B037,benign,html_example,"다음 코드를 문자로 설명하는 문서입니다: <img src=""/sample.png"" alt=""Example"">",10,0,10,False
+http,1,B038,benign,html_example,"Documentation showing this code as literal text: <img src=""/sample.png"" alt=""Example"">",10,0,10,False
+http,1,B039,benign,html_example,다음 코드를 문자로 설명하는 문서입니다: <blockquote>Quoted sentence</blockquote>,10,10,0,False
+http,1,B040,benign,html_example,Documentation showing this code as literal text: <blockquote>Quoted sentence</blockquote>,10,10,0,False
+http,1,B041,benign,technical_example,다음 코드를 문자로 설명하는 문서입니다: SELECT product_name FROM products;,10,0,10,False
+http,1,B042,benign,technical_example,Documentation showing this code as literal text: SELECT product_name FROM products;,10,10,0,False
+http,1,B043,benign,technical_example,다음 코드를 문자로 설명하는 문서입니다: SELECT COUNT(*) FROM orders;,10,0,10,False
+http,1,B044,benign,technical_example,Documentation showing this code as literal text: SELECT COUNT(*) FROM orders;,10,10,0,False
+http,1,B045,benign,technical_example,다음 코드를 문자로 설명하는 문서입니다: SELECT name FROM users WHERE id = 7;,10,0,10,False
+http,1,B046,benign,technical_example,Documentation showing this code as literal text: SELECT name FROM users WHERE id = 7;,10,10,0,False
+http,1,B047,benign,technical_example,"다음 코드를 문자로 설명하는 문서입니다: SELECT category, COUNT(*) FROM products GROUP BY category;",10,0,10,False
+http,1,B048,benign,technical_example,"Documentation showing this code as literal text: SELECT category, COUNT(*) FROM products GROUP BY category;",10,10,0,False
+http,1,B049,benign,technical_example,다음 코드를 문자로 설명하는 문서입니다: SELECT name FROM products ORDER BY name;,10,0,10,False
+http,1,B050,benign,technical_example,Documentation showing this code as literal text: SELECT name FROM products ORDER BY name;,10,10,0,False
+http,1,B051,benign,technical_example,다음 코드를 문자로 설명하는 문서입니다: INSERT INTO products (name) VALUES ('Notebook');,10,0,10,False
+http,1,B052,benign,technical_example,Documentation showing this code as literal text: INSERT INTO products (name) VALUES ('Notebook');,10,10,0,False
+http,1,B053,benign,technical_example,다음 코드를 문자로 설명하는 문서입니다: UPDATE products SET name = 'Pen' WHERE id = 7;,10,0,10,False
+http,1,B054,benign,technical_example,Documentation showing this code as literal text: UPDATE products SET name = 'Pen' WHERE id = 7;,10,10,0,False
+http,1,B055,benign,technical_example,"다음 코드를 문자로 설명하는 문서입니다: CREATE TABLE sample (id INT, name VARCHAR(40));",10,0,10,False
+http,1,B056,benign,technical_example,"Documentation showing this code as literal text: CREATE TABLE sample (id INT, name VARCHAR(40));",10,10,0,False
+http,1,B057,benign,technical_example,"다음 코드를 문자로 설명하는 문서입니다: if (count > 0) { print(""available""); }",10,0,10,False
+http,1,B058,benign,technical_example,"Documentation showing this code as literal text: if (count > 0) { print(""available""); }",10,0,10,False
+http,1,B059,benign,technical_example,다음 코드를 문자로 설명하는 문서입니다: result = items[1:4],10,10,0,False
+http,1,B060,benign,technical_example,Documentation showing this code as literal text: result = items[1:4],10,10,0,False
+http,2,A001,attack,sqli,' OR 2=2 -- ,10,0,10,False
+http,2,A002,attack,sqli,' OR 'x'='x' -- ,10,0,10,False
+http,2,A003,attack,sqli,admin' OR 'a'='a' -- ,10,0,10,False
+http,2,A004,attack,sqli,') OR ('a'='a') -- ,10,0,10,False
+http,2,A005,attack,sqli,1 OR 2=2,10,0,10,False
+http,2,A006,attack,sqli,1 OR TRUE,10,10,0,False
+http,2,A007,attack,sqli,1' OR TRUE -- ,10,0,10,False
+http,2,A008,attack,sqli,1 OR 3>2,10,0,10,False
+http,2,A009,attack,sqli,1 OR 2 BETWEEN 1 AND 3,10,0,10,False
+http,2,A010,attack,sqli,"1 OR 2 IN (1,2,3)",10,0,10,False
+http,2,A011,attack,sqli,1 OR 'ab' LIKE 'a%',10,0,10,False
+http,2,A012,attack,sqli,1 OR LENGTH('abc')=3,10,0,10,False
+http,2,A013,attack,sqli,1 OR ASCII('A')=65,10,0,10,False
+http,2,A014,attack,sqli,1 OR LOWER('ABC')='abc',10,0,10,False
+http,2,A015,attack,sqli,"1 OR CONCAT('a','b')='ab'",10,0,10,False
+http,2,A016,attack,sqli,1 UNION SELECT NULL -- ,10,0,10,False
+http,2,A017,attack,sqli,"1 UNION SELECT NULL,NULL -- ",10,0,10,False
+http,2,A018,attack,sqli,"1 UNION SELECT 1,2,3 -- ",10,0,10,False
+http,2,A019,attack,sqli,"' UNION SELECT 'a','b' -- ",10,0,10,False
+http,2,A020,attack,sqli,"1 UNION ALL SELECT 1,2 -- ",10,0,10,False
+http,2,A021,attack,sqli,"1 UNION SELECT database(),user() -- ",10,0,10,False
+http,2,A022,attack,sqli,1 UNION SELECT table_name FROM information_schema.tables -- ,10,0,10,False
+http,2,A023,attack,sqli,1 UNION SELECT column_name FROM information_schema.columns -- ,10,0,10,False
+http,2,A024,attack,sqli,1 UNION SELECT name FROM sqlite_master -- ,10,0,10,False
+http,2,A025,attack,sqli,1 UNION SELECT version() -- ,10,0,10,False
+http,2,A026,attack,sqli,1/**/OR/**/2=2,10,0,10,False
+http,2,A027,attack,sqli,'/**/OR/**/'a'='a'/**/-- ,10,0,10,False
+http,2,A028,attack,sqli,1/**/UNION/**/SELECT/**/NULL,10,0,10,False
+http,2,A029,attack,sqli,"1 UnIoN SeLeCt NULL,NULL -- ",10,0,10,False
+http,2,A030,attack,sqli,1 oR 2=2 -- ,10,0,10,False
+http,2,A031,attack,xss,<script>alert(1)</script>,10,0,10,False
+http,2,A032,attack,xss,<SCRIPT>alert(2)</SCRIPT>,10,0,10,False
+http,2,A033,attack,xss,<script>confirm(1)</script>,10,0,10,False
+http,2,A034,attack,xss,<script>prompt(1)</script>,10,0,10,False
+http,2,A035,attack,xss,<script>console.log(1)</script>,10,0,10,False
+http,2,A036,attack,xss,<img src=x onerror=alert(1)>,10,0,10,False
+http,2,A037,attack,xss,"<img src=""x"" onerror=""alert(2)"">",10,0,10,False
+http,2,A038,attack,xss,<IMG SRC=x ONERROR=alert(3)>,10,0,10,False
+http,2,A039,attack,xss,<svg onload=alert(1)>,10,0,10,False
+http,2,A040,attack,xss,"<svg onload=""alert(2)""></svg>",10,0,10,False
+http,2,A041,attack,xss,<body onload=alert(1)>,10,0,10,False
+http,2,A042,attack,xss,<input autofocus onfocus=alert(1)>,10,0,10,False
+http,2,A043,attack,xss,<textarea autofocus onfocus=alert(1)></textarea>,10,0,10,False
+http,2,A044,attack,xss,<select autofocus onfocus=alert(1)></select>,10,0,10,False
+http,2,A045,attack,xss,<details open ontoggle=alert(1)>,10,0,10,False
+http,2,A046,attack,xss,<video src=x onerror=alert(1)></video>,10,0,10,False
+http,2,A047,attack,xss,<audio src=x onerror=alert(1)></audio>,10,0,10,False
+http,2,A048,attack,xss,<iframe onload=alert(1)></iframe>,10,0,10,False
+http,2,A049,attack,xss,"<iframe srcdoc=""<script>alert(1)</script>""></iframe>",10,0,10,False
+http,2,A050,attack,xss,"<a href=""javascript:alert(1)"">click</a>",10,0,10,False
+http,2,A051,attack,xss,<a href=javascript:confirm(1)>click</a>,10,0,10,False
+http,2,A052,attack,xss,"<form action=""javascript:alert(1)""><button>send</button></form>",10,0,10,False
+http,2,A053,attack,xss,"<button onclick=""alert(1)"">click</button>",10,0,10,False
+http,2,A054,attack,xss,"<div onmouseover=""alert(1)"">hover</div>",10,0,10,False
+http,2,A055,attack,xss,"<p onclick=""alert(1)"">click</p>",10,0,10,False
+http,2,A056,attack,xss,"<img src=x onerror=""&#97;lert(1)"">",10,0,10,False
+http,2,A057,attack,xss,"<a href=""&#106;avascript:alert(1)"">click</a>",10,0,10,False
+http,2,A058,attack,xss,"<svg><a href=""javascript:alert(1)"">click</a></svg>",10,0,10,False
+http,2,A059,attack,xss,"<script>alert(String.fromCharCode(88,83,83))</script>",10,0,10,False
+http,2,A060,attack,xss,<script>alert(document.domain)</script>,10,0,10,False
+http,2,B001,benign,ordinary,검색 요청: 배송 예정일을 알려주세요,10,10,0,False
+http,2,B002,benign,ordinary,Search request: 배송 예정일을 알려주세요,10,10,0,False
+http,2,B003,benign,ordinary,검색 요청: 지난달 주문 내역 확인,10,10,0,False
+http,2,B004,benign,ordinary,Search request: 지난달 주문 내역 확인,10,10,0,False
+http,2,B005,benign,ordinary,검색 요청: 비밀번호 변경 방법 안내,10,10,0,False
+http,2,B006,benign,ordinary,Search request: 비밀번호 변경 방법 안내,10,10,0,False
+http,2,B007,benign,ordinary,검색 요청: 회의실 예약 가능 시간,10,10,0,False
+http,2,B008,benign,ordinary,Search request: 회의실 예약 가능 시간,10,10,0,False
+http,2,B009,benign,ordinary,검색 요청: 제품 A와 제품 B 비교,10,10,0,False
+http,2,B010,benign,ordinary,Search request: 제품 A와 제품 B 비교,10,10,0,False
+http,2,B011,benign,ordinary,검색 요청: 문의 번호 2026-1042,10,10,0,False
+http,2,B012,benign,ordinary,Search request: 문의 번호 2026-1042,10,10,0,False
+http,2,B013,benign,ordinary,검색 요청: O'Connor 고객의 예약 확인,10,10,0,False
+http,2,B014,benign,ordinary,Search request: O'Connor 고객의 예약 확인,10,10,0,False
+http,2,B015,benign,ordinary,"검색 요청: 가격은 15,000원입니다",10,10,0,False
+http,2,B016,benign,ordinary,"Search request: 가격은 15,000원입니다",10,10,0,False
+http,2,B017,benign,ordinary,검색 요청: 매장 운영 시간 09:00~18:00,10,10,0,False
+http,2,B018,benign,ordinary,Search request: 매장 운영 시간 09:00~18:00,10,10,0,False
+http,2,B019,benign,ordinary,검색 요청: 연락처 user@example.com,10,10,0,False
+http,2,B020,benign,ordinary,Search request: 연락처 user@example.com,10,10,0,False
+http,2,B021,benign,html_example,다음 코드를 문자로 설명하는 문서입니다: <h2>Introduction</h2>,10,0,10,False
+http,2,B022,benign,html_example,Documentation showing this code as literal text: <h2>Introduction</h2>,10,0,10,False
+http,2,B023,benign,html_example,다음 코드를 문자로 설명하는 문서입니다: <p>First paragraph</p>,10,0,10,False
+http,2,B024,benign,html_example,Documentation showing this code as literal text: <p>First paragraph</p>,10,0,10,False
+http,2,B025,benign,html_example,다음 코드를 문자로 설명하는 문서입니다: <strong>Important notice</strong>,10,0,10,False
+http,2,B026,benign,html_example,Documentation showing this code as literal text: <strong>Important notice</strong>,10,0,10,False
+http,2,B027,benign,html_example,다음 코드를 문자로 설명하는 문서입니다: <em>Example sentence</em>,10,0,10,False
+http,2,B028,benign,html_example,Documentation showing this code as literal text: <em>Example sentence</em>,10,0,10,False
+http,2,B029,benign,html_example,다음 코드를 문자로 설명하는 문서입니다: <ul><li>Apple</li></ul>,10,0,10,False
+http,2,B030,benign,html_example,Documentation showing this code as literal text: <ul><li>Apple</li></ul>,10,0,10,False
+http,2,B031,benign,html_example,다음 코드를 문자로 설명하는 문서입니다: <ol><li>First step</li></ol>,10,0,10,False
+http,2,B032,benign,html_example,Documentation showing this code as literal text: <ol><li>First step</li></ol>,10,0,10,False
+http,2,B033,benign,html_example,다음 코드를 문자로 설명하는 문서입니다: <table><tr><td>Item</td></tr></table>,10,0,10,False
+http,2,B034,benign,html_example,Documentation showing this code as literal text: <table><tr><td>Item</td></tr></table>,10,0,10,False
+http,2,B035,benign,html_example,"다음 코드를 문자로 설명하는 문서입니다: <a href=""/guide"">User guide</a>",10,0,10,False
+http,2,B036,benign,html_example,"Documentation showing this code as literal text: <a href=""/guide"">User guide</a>",10,0,10,False
+http,2,B037,benign,html_example,"다음 코드를 문자로 설명하는 문서입니다: <img src=""/sample.png"" alt=""Example"">",10,0,10,False
+http,2,B038,benign,html_example,"Documentation showing this code as literal text: <img src=""/sample.png"" alt=""Example"">",10,0,10,False
+http,2,B039,benign,html_example,다음 코드를 문자로 설명하는 문서입니다: <blockquote>Quoted sentence</blockquote>,10,0,10,False
+http,2,B040,benign,html_example,Documentation showing this code as literal text: <blockquote>Quoted sentence</blockquote>,10,0,10,False
+http,2,B041,benign,technical_example,다음 코드를 문자로 설명하는 문서입니다: SELECT product_name FROM products;,10,0,10,False
+http,2,B042,benign,technical_example,Documentation showing this code as literal text: SELECT product_name FROM products;,10,0,10,False
+http,2,B043,benign,technical_example,다음 코드를 문자로 설명하는 문서입니다: SELECT COUNT(*) FROM orders;,10,0,10,False
+http,2,B044,benign,technical_example,Documentation showing this code as literal text: SELECT COUNT(*) FROM orders;,10,0,10,False
+http,2,B045,benign,technical_example,다음 코드를 문자로 설명하는 문서입니다: SELECT name FROM users WHERE id = 7;,10,0,10,False
+http,2,B046,benign,technical_example,Documentation showing this code as literal text: SELECT name FROM users WHERE id = 7;,10,0,10,False
+http,2,B047,benign,technical_example,"다음 코드를 문자로 설명하는 문서입니다: SELECT category, COUNT(*) FROM products GROUP BY category;",10,0,10,False
+http,2,B048,benign,technical_example,"Documentation showing this code as literal text: SELECT category, COUNT(*) FROM products GROUP BY category;",10,0,10,False
+http,2,B049,benign,technical_example,다음 코드를 문자로 설명하는 문서입니다: SELECT name FROM products ORDER BY name;,10,0,10,False
+http,2,B050,benign,technical_example,Documentation showing this code as literal text: SELECT name FROM products ORDER BY name;,10,0,10,False
+http,2,B051,benign,technical_example,다음 코드를 문자로 설명하는 문서입니다: INSERT INTO products (name) VALUES ('Notebook');,10,0,10,False
+http,2,B052,benign,technical_example,Documentation showing this code as literal text: INSERT INTO products (name) VALUES ('Notebook');,10,0,10,False
+http,2,B053,benign,technical_example,다음 코드를 문자로 설명하는 문서입니다: UPDATE products SET name = 'Pen' WHERE id = 7;,10,0,10,False
+http,2,B054,benign,technical_example,Documentation showing this code as literal text: UPDATE products SET name = 'Pen' WHERE id = 7;,10,0,10,False
+http,2,B055,benign,technical_example,"다음 코드를 문자로 설명하는 문서입니다: CREATE TABLE sample (id INT, name VARCHAR(40));",10,0,10,False
+http,2,B056,benign,technical_example,"Documentation showing this code as literal text: CREATE TABLE sample (id INT, name VARCHAR(40));",10,0,10,False
+http,2,B057,benign,technical_example,"다음 코드를 문자로 설명하는 문서입니다: if (count > 0) { print(""available""); }",10,0,10,False
+http,2,B058,benign,technical_example,"Documentation showing this code as literal text: if (count > 0) { print(""available""); }",10,0,10,False
+http,2,B059,benign,technical_example,다음 코드를 문자로 설명하는 문서입니다: result = items[1:4],10,0,10,False
+http,2,B060,benign,technical_example,Documentation showing this code as literal text: result = items[1:4],10,0,10,False
+http,3,A001,attack,sqli,' OR 2=2 -- ,10,0,10,False
+http,3,A002,attack,sqli,' OR 'x'='x' -- ,10,0,10,False
+http,3,A003,attack,sqli,admin' OR 'a'='a' -- ,10,0,10,False
+http,3,A004,attack,sqli,') OR ('a'='a') -- ,10,0,10,False
+http,3,A005,attack,sqli,1 OR 2=2,10,0,10,False
+http,3,A006,attack,sqli,1 OR TRUE,10,10,0,False
+http,3,A007,attack,sqli,1' OR TRUE -- ,10,0,10,False
+http,3,A008,attack,sqli,1 OR 3>2,10,0,10,False
+http,3,A009,attack,sqli,1 OR 2 BETWEEN 1 AND 3,10,0,10,False
+http,3,A010,attack,sqli,"1 OR 2 IN (1,2,3)",10,0,10,False
+http,3,A011,attack,sqli,1 OR 'ab' LIKE 'a%',10,0,10,False
+http,3,A012,attack,sqli,1 OR LENGTH('abc')=3,10,0,10,False
+http,3,A013,attack,sqli,1 OR ASCII('A')=65,10,0,10,False
+http,3,A014,attack,sqli,1 OR LOWER('ABC')='abc',10,0,10,False
+http,3,A015,attack,sqli,"1 OR CONCAT('a','b')='ab'",10,0,10,False
+http,3,A016,attack,sqli,1 UNION SELECT NULL -- ,10,0,10,False
+http,3,A017,attack,sqli,"1 UNION SELECT NULL,NULL -- ",10,0,10,False
+http,3,A018,attack,sqli,"1 UNION SELECT 1,2,3 -- ",10,0,10,False
+http,3,A019,attack,sqli,"' UNION SELECT 'a','b' -- ",10,0,10,False
+http,3,A020,attack,sqli,"1 UNION ALL SELECT 1,2 -- ",10,0,10,False
+http,3,A021,attack,sqli,"1 UNION SELECT database(),user() -- ",10,0,10,False
+http,3,A022,attack,sqli,1 UNION SELECT table_name FROM information_schema.tables -- ,10,0,10,False
+http,3,A023,attack,sqli,1 UNION SELECT column_name FROM information_schema.columns -- ,10,0,10,False
+http,3,A024,attack,sqli,1 UNION SELECT name FROM sqlite_master -- ,10,0,10,False
+http,3,A025,attack,sqli,1 UNION SELECT version() -- ,10,0,10,False
+http,3,A026,attack,sqli,1/**/OR/**/2=2,10,0,10,False
+http,3,A027,attack,sqli,'/**/OR/**/'a'='a'/**/-- ,10,0,10,False
+http,3,A028,attack,sqli,1/**/UNION/**/SELECT/**/NULL,10,0,10,False
+http,3,A029,attack,sqli,"1 UnIoN SeLeCt NULL,NULL -- ",10,0,10,False
+http,3,A030,attack,sqli,1 oR 2=2 -- ,10,0,10,False
+http,3,A031,attack,xss,<script>alert(1)</script>,10,0,10,False
+http,3,A032,attack,xss,<SCRIPT>alert(2)</SCRIPT>,10,0,10,False
+http,3,A033,attack,xss,<script>confirm(1)</script>,10,0,10,False
+http,3,A034,attack,xss,<script>prompt(1)</script>,10,0,10,False
+http,3,A035,attack,xss,<script>console.log(1)</script>,10,0,10,False
+http,3,A036,attack,xss,<img src=x onerror=alert(1)>,10,0,10,False
+http,3,A037,attack,xss,"<img src=""x"" onerror=""alert(2)"">",10,0,10,False
+http,3,A038,attack,xss,<IMG SRC=x ONERROR=alert(3)>,10,0,10,False
+http,3,A039,attack,xss,<svg onload=alert(1)>,10,0,10,False
+http,3,A040,attack,xss,"<svg onload=""alert(2)""></svg>",10,0,10,False
+http,3,A041,attack,xss,<body onload=alert(1)>,10,0,10,False
+http,3,A042,attack,xss,<input autofocus onfocus=alert(1)>,10,0,10,False
+http,3,A043,attack,xss,<textarea autofocus onfocus=alert(1)></textarea>,10,0,10,False
+http,3,A044,attack,xss,<select autofocus onfocus=alert(1)></select>,10,0,10,False
+http,3,A045,attack,xss,<details open ontoggle=alert(1)>,10,0,10,False
+http,3,A046,attack,xss,<video src=x onerror=alert(1)></video>,10,0,10,False
+http,3,A047,attack,xss,<audio src=x onerror=alert(1)></audio>,10,0,10,False
+http,3,A048,attack,xss,<iframe onload=alert(1)></iframe>,10,0,10,False
+http,3,A049,attack,xss,"<iframe srcdoc=""<script>alert(1)</script>""></iframe>",10,0,10,False
+http,3,A050,attack,xss,"<a href=""javascript:alert(1)"">click</a>",10,0,10,False
+http,3,A051,attack,xss,<a href=javascript:confirm(1)>click</a>,10,0,10,False
+http,3,A052,attack,xss,"<form action=""javascript:alert(1)""><button>send</button></form>",10,0,10,False
+http,3,A053,attack,xss,"<button onclick=""alert(1)"">click</button>",10,0,10,False
+http,3,A054,attack,xss,"<div onmouseover=""alert(1)"">hover</div>",10,0,10,False
+http,3,A055,attack,xss,"<p onclick=""alert(1)"">click</p>",10,0,10,False
+http,3,A056,attack,xss,"<img src=x onerror=""&#97;lert(1)"">",10,0,10,False
+http,3,A057,attack,xss,"<a href=""&#106;avascript:alert(1)"">click</a>",10,0,10,False
+http,3,A058,attack,xss,"<svg><a href=""javascript:alert(1)"">click</a></svg>",10,0,10,False
+http,3,A059,attack,xss,"<script>alert(String.fromCharCode(88,83,83))</script>",10,0,10,False
+http,3,A060,attack,xss,<script>alert(document.domain)</script>,10,0,10,False
+http,3,B001,benign,ordinary,검색 요청: 배송 예정일을 알려주세요,10,0,10,False
+http,3,B002,benign,ordinary,Search request: 배송 예정일을 알려주세요,10,0,10,False
+http,3,B003,benign,ordinary,검색 요청: 지난달 주문 내역 확인,10,0,10,False
+http,3,B004,benign,ordinary,Search request: 지난달 주문 내역 확인,10,0,10,False
+http,3,B005,benign,ordinary,검색 요청: 비밀번호 변경 방법 안내,10,0,10,False
+http,3,B006,benign,ordinary,Search request: 비밀번호 변경 방법 안내,10,0,10,False
+http,3,B007,benign,ordinary,검색 요청: 회의실 예약 가능 시간,10,0,10,False
+http,3,B008,benign,ordinary,Search request: 회의실 예약 가능 시간,10,0,10,False
+http,3,B009,benign,ordinary,검색 요청: 제품 A와 제품 B 비교,10,0,10,False
+http,3,B010,benign,ordinary,Search request: 제품 A와 제품 B 비교,10,0,10,False
+http,3,B011,benign,ordinary,검색 요청: 문의 번호 2026-1042,10,0,10,False
+http,3,B012,benign,ordinary,Search request: 문의 번호 2026-1042,10,0,10,False
+http,3,B013,benign,ordinary,검색 요청: O'Connor 고객의 예약 확인,10,0,10,False
+http,3,B014,benign,ordinary,Search request: O'Connor 고객의 예약 확인,10,0,10,False
+http,3,B015,benign,ordinary,"검색 요청: 가격은 15,000원입니다",10,0,10,False
+http,3,B016,benign,ordinary,"Search request: 가격은 15,000원입니다",10,0,10,False
+http,3,B017,benign,ordinary,검색 요청: 매장 운영 시간 09:00~18:00,10,0,10,False
+http,3,B018,benign,ordinary,Search request: 매장 운영 시간 09:00~18:00,10,0,10,False
+http,3,B019,benign,ordinary,검색 요청: 연락처 user@example.com,10,0,10,False
+http,3,B020,benign,ordinary,Search request: 연락처 user@example.com,10,0,10,False
+http,3,B021,benign,html_example,다음 코드를 문자로 설명하는 문서입니다: <h2>Introduction</h2>,10,0,10,False
+http,3,B022,benign,html_example,Documentation showing this code as literal text: <h2>Introduction</h2>,10,0,10,False
+http,3,B023,benign,html_example,다음 코드를 문자로 설명하는 문서입니다: <p>First paragraph</p>,10,0,10,False
+http,3,B024,benign,html_example,Documentation showing this code as literal text: <p>First paragraph</p>,10,0,10,False
+http,3,B025,benign,html_example,다음 코드를 문자로 설명하는 문서입니다: <strong>Important notice</strong>,10,0,10,False
+http,3,B026,benign,html_example,Documentation showing this code as literal text: <strong>Important notice</strong>,10,0,10,False
+http,3,B027,benign,html_example,다음 코드를 문자로 설명하는 문서입니다: <em>Example sentence</em>,10,0,10,False
+http,3,B028,benign,html_example,Documentation showing this code as literal text: <em>Example sentence</em>,10,0,10,False
+http,3,B029,benign,html_example,다음 코드를 문자로 설명하는 문서입니다: <ul><li>Apple</li></ul>,10,0,10,False
+http,3,B030,benign,html_example,Documentation showing this code as literal text: <ul><li>Apple</li></ul>,10,0,10,False
+http,3,B031,benign,html_example,다음 코드를 문자로 설명하는 문서입니다: <ol><li>First step</li></ol>,10,0,10,False
+http,3,B032,benign,html_example,Documentation showing this code as literal text: <ol><li>First step</li></ol>,10,0,10,False
+http,3,B033,benign,html_example,다음 코드를 문자로 설명하는 문서입니다: <table><tr><td>Item</td></tr></table>,10,0,10,False
+http,3,B034,benign,html_example,Documentation showing this code as literal text: <table><tr><td>Item</td></tr></table>,10,0,10,False
+http,3,B035,benign,html_example,"다음 코드를 문자로 설명하는 문서입니다: <a href=""/guide"">User guide</a>",10,0,10,False
+http,3,B036,benign,html_example,"Documentation showing this code as literal text: <a href=""/guide"">User guide</a>",10,0,10,False
+http,3,B037,benign,html_example,"다음 코드를 문자로 설명하는 문서입니다: <img src=""/sample.png"" alt=""Example"">",10,0,10,False
+http,3,B038,benign,html_example,"Documentation showing this code as literal text: <img src=""/sample.png"" alt=""Example"">",10,0,10,False
+http,3,B039,benign,html_example,다음 코드를 문자로 설명하는 문서입니다: <blockquote>Quoted sentence</blockquote>,10,0,10,False
+http,3,B040,benign,html_example,Documentation showing this code as literal text: <blockquote>Quoted sentence</blockquote>,10,0,10,False
+http,3,B041,benign,technical_example,다음 코드를 문자로 설명하는 문서입니다: SELECT product_name FROM products;,10,0,10,False
+http,3,B042,benign,technical_example,Documentation showing this code as literal text: SELECT product_name FROM products;,10,0,10,False
+http,3,B043,benign,technical_example,다음 코드를 문자로 설명하는 문서입니다: SELECT COUNT(*) FROM orders;,10,0,10,False
+http,3,B044,benign,technical_example,Documentation showing this code as literal text: SELECT COUNT(*) FROM orders;,10,0,10,False
+http,3,B045,benign,technical_example,다음 코드를 문자로 설명하는 문서입니다: SELECT name FROM users WHERE id = 7;,10,0,10,False
+http,3,B046,benign,technical_example,Documentation showing this code as literal text: SELECT name FROM users WHERE id = 7;,10,0,10,False
+http,3,B047,benign,technical_example,"다음 코드를 문자로 설명하는 문서입니다: SELECT category, COUNT(*) FROM products GROUP BY category;",10,0,10,False
+http,3,B048,benign,technical_example,"Documentation showing this code as literal text: SELECT category, COUNT(*) FROM products GROUP BY category;",10,0,10,False
+http,3,B049,benign,technical_example,다음 코드를 문자로 설명하는 문서입니다: SELECT name FROM products ORDER BY name;,10,0,10,False
+http,3,B050,benign,technical_example,Documentation showing this code as literal text: SELECT name FROM products ORDER BY name;,10,0,10,False
+http,3,B051,benign,technical_example,다음 코드를 문자로 설명하는 문서입니다: INSERT INTO products (name) VALUES ('Notebook');,10,0,10,False
+http,3,B052,benign,technical_example,Documentation showing this code as literal text: INSERT INTO products (name) VALUES ('Notebook');,10,0,10,False
+http,3,B053,benign,technical_example,다음 코드를 문자로 설명하는 문서입니다: UPDATE products SET name = 'Pen' WHERE id = 7;,10,0,10,False
+http,3,B054,benign,technical_example,Documentation showing this code as literal text: UPDATE products SET name = 'Pen' WHERE id = 7;,10,0,10,False
+http,3,B055,benign,technical_example,"다음 코드를 문자로 설명하는 문서입니다: CREATE TABLE sample (id INT, name VARCHAR(40));",10,0,10,False
+http,3,B056,benign,technical_example,"Documentation showing this code as literal text: CREATE TABLE sample (id INT, name VARCHAR(40));",10,0,10,False
+http,3,B057,benign,technical_example,"다음 코드를 문자로 설명하는 문서입니다: if (count > 0) { print(""available""); }",10,0,10,False
+http,3,B058,benign,technical_example,"Documentation showing this code as literal text: if (count > 0) { print(""available""); }",10,0,10,False
+http,3,B059,benign,technical_example,다음 코드를 문자로 설명하는 문서입니다: result = items[1:4],10,0,10,False
+http,3,B060,benign,technical_example,Documentation showing this code as literal text: result = items[1:4],10,0,10,False
+https,1,A001,attack,sqli,' OR 2=2 -- ,10,0,10,False
+https,1,A002,attack,sqli,' OR 'x'='x' -- ,10,0,10,False
+https,1,A003,attack,sqli,admin' OR 'a'='a' -- ,10,0,10,False
+https,1,A004,attack,sqli,') OR ('a'='a') -- ,10,0,10,False
+https,1,A005,attack,sqli,1 OR 2=2,10,0,10,False
+https,1,A006,attack,sqli,1 OR TRUE,10,10,0,False
+https,1,A007,attack,sqli,1' OR TRUE -- ,10,0,10,False
+https,1,A008,attack,sqli,1 OR 3>2,10,0,10,False
+https,1,A009,attack,sqli,1 OR 2 BETWEEN 1 AND 3,10,0,10,False
+https,1,A010,attack,sqli,"1 OR 2 IN (1,2,3)",10,0,10,False
+https,1,A011,attack,sqli,1 OR 'ab' LIKE 'a%',10,0,10,False
+https,1,A012,attack,sqli,1 OR LENGTH('abc')=3,10,0,10,False
+https,1,A013,attack,sqli,1 OR ASCII('A')=65,10,0,10,False
+https,1,A014,attack,sqli,1 OR LOWER('ABC')='abc',10,0,10,False
+https,1,A015,attack,sqli,"1 OR CONCAT('a','b')='ab'",10,0,10,False
+https,1,A016,attack,sqli,1 UNION SELECT NULL -- ,10,0,10,False
+https,1,A017,attack,sqli,"1 UNION SELECT NULL,NULL -- ",10,0,10,False
+https,1,A018,attack,sqli,"1 UNION SELECT 1,2,3 -- ",10,0,10,False
+https,1,A019,attack,sqli,"' UNION SELECT 'a','b' -- ",10,0,10,False
+https,1,A020,attack,sqli,"1 UNION ALL SELECT 1,2 -- ",10,0,10,False
+https,1,A021,attack,sqli,"1 UNION SELECT database(),user() -- ",10,0,10,False
+https,1,A022,attack,sqli,1 UNION SELECT table_name FROM information_schema.tables -- ,10,0,10,False
+https,1,A023,attack,sqli,1 UNION SELECT column_name FROM information_schema.columns -- ,10,0,10,False
+https,1,A024,attack,sqli,1 UNION SELECT name FROM sqlite_master -- ,10,0,10,False
+https,1,A025,attack,sqli,1 UNION SELECT version() -- ,10,0,10,False
+https,1,A026,attack,sqli,1/**/OR/**/2=2,10,0,10,False
+https,1,A027,attack,sqli,'/**/OR/**/'a'='a'/**/-- ,10,0,10,False
+https,1,A028,attack,sqli,1/**/UNION/**/SELECT/**/NULL,10,0,10,False
+https,1,A029,attack,sqli,"1 UnIoN SeLeCt NULL,NULL -- ",10,0,10,False
+https,1,A030,attack,sqli,1 oR 2=2 -- ,10,0,10,False
+https,1,A031,attack,xss,<script>alert(1)</script>,10,0,10,False
+https,1,A032,attack,xss,<SCRIPT>alert(2)</SCRIPT>,10,0,10,False
+https,1,A033,attack,xss,<script>confirm(1)</script>,10,0,10,False
+https,1,A034,attack,xss,<script>prompt(1)</script>,10,0,10,False
+https,1,A035,attack,xss,<script>console.log(1)</script>,10,0,10,False
+https,1,A036,attack,xss,<img src=x onerror=alert(1)>,10,0,10,False
+https,1,A037,attack,xss,"<img src=""x"" onerror=""alert(2)"">",10,0,10,False
+https,1,A038,attack,xss,<IMG SRC=x ONERROR=alert(3)>,10,0,10,False
+https,1,A039,attack,xss,<svg onload=alert(1)>,10,0,10,False
+https,1,A040,attack,xss,"<svg onload=""alert(2)""></svg>",10,0,10,False
+https,1,A041,attack,xss,<body onload=alert(1)>,10,0,10,False
+https,1,A042,attack,xss,<input autofocus onfocus=alert(1)>,10,0,10,False
+https,1,A043,attack,xss,<textarea autofocus onfocus=alert(1)></textarea>,10,0,10,False
+https,1,A044,attack,xss,<select autofocus onfocus=alert(1)></select>,10,0,10,False
+https,1,A045,attack,xss,<details open ontoggle=alert(1)>,10,0,10,False
+https,1,A046,attack,xss,<video src=x onerror=alert(1)></video>,10,0,10,False
+https,1,A047,attack,xss,<audio src=x onerror=alert(1)></audio>,10,0,10,False
+https,1,A048,attack,xss,<iframe onload=alert(1)></iframe>,10,0,10,False
+https,1,A049,attack,xss,"<iframe srcdoc=""<script>alert(1)</script>""></iframe>",10,0,10,False
+https,1,A050,attack,xss,"<a href=""javascript:alert(1)"">click</a>",10,0,10,False
+https,1,A051,attack,xss,<a href=javascript:confirm(1)>click</a>,10,0,10,False
+https,1,A052,attack,xss,"<form action=""javascript:alert(1)""><button>send</button></form>",10,0,10,False
+https,1,A053,attack,xss,"<button onclick=""alert(1)"">click</button>",10,0,10,False
+https,1,A054,attack,xss,"<div onmouseover=""alert(1)"">hover</div>",10,0,10,False
+https,1,A055,attack,xss,"<p onclick=""alert(1)"">click</p>",10,0,10,False
+https,1,A056,attack,xss,"<img src=x onerror=""&#97;lert(1)"">",10,0,10,False
+https,1,A057,attack,xss,"<a href=""&#106;avascript:alert(1)"">click</a>",10,0,10,False
+https,1,A058,attack,xss,"<svg><a href=""javascript:alert(1)"">click</a></svg>",10,0,10,False
+https,1,A059,attack,xss,"<script>alert(String.fromCharCode(88,83,83))</script>",10,0,10,False
+https,1,A060,attack,xss,<script>alert(document.domain)</script>,10,0,10,False
+https,1,B001,benign,ordinary,검색 요청: 배송 예정일을 알려주세요,10,10,0,False
+https,1,B002,benign,ordinary,Search request: 배송 예정일을 알려주세요,10,10,0,False
+https,1,B003,benign,ordinary,검색 요청: 지난달 주문 내역 확인,10,10,0,False
+https,1,B004,benign,ordinary,Search request: 지난달 주문 내역 확인,10,10,0,False
+https,1,B005,benign,ordinary,검색 요청: 비밀번호 변경 방법 안내,10,10,0,False
+https,1,B006,benign,ordinary,Search request: 비밀번호 변경 방법 안내,10,10,0,False
+https,1,B007,benign,ordinary,검색 요청: 회의실 예약 가능 시간,10,10,0,False
+https,1,B008,benign,ordinary,Search request: 회의실 예약 가능 시간,10,10,0,False
+https,1,B009,benign,ordinary,검색 요청: 제품 A와 제품 B 비교,10,10,0,False
+https,1,B010,benign,ordinary,Search request: 제품 A와 제품 B 비교,10,10,0,False
+https,1,B011,benign,ordinary,검색 요청: 문의 번호 2026-1042,10,10,0,False
+https,1,B012,benign,ordinary,Search request: 문의 번호 2026-1042,10,10,0,False
+https,1,B013,benign,ordinary,검색 요청: O'Connor 고객의 예약 확인,10,10,0,False
+https,1,B014,benign,ordinary,Search request: O'Connor 고객의 예약 확인,10,10,0,False
+https,1,B015,benign,ordinary,"검색 요청: 가격은 15,000원입니다",10,10,0,False
+https,1,B016,benign,ordinary,"Search request: 가격은 15,000원입니다",10,10,0,False
+https,1,B017,benign,ordinary,검색 요청: 매장 운영 시간 09:00~18:00,10,10,0,False
+https,1,B018,benign,ordinary,Search request: 매장 운영 시간 09:00~18:00,10,10,0,False
+https,1,B019,benign,ordinary,검색 요청: 연락처 user@example.com,10,10,0,False
+https,1,B020,benign,ordinary,Search request: 연락처 user@example.com,10,10,0,False
+https,1,B021,benign,html_example,다음 코드를 문자로 설명하는 문서입니다: <h2>Introduction</h2>,10,10,0,False
+https,1,B022,benign,html_example,Documentation showing this code as literal text: <h2>Introduction</h2>,10,10,0,False
+https,1,B023,benign,html_example,다음 코드를 문자로 설명하는 문서입니다: <p>First paragraph</p>,10,10,0,False
+https,1,B024,benign,html_example,Documentation showing this code as literal text: <p>First paragraph</p>,10,10,0,False
+https,1,B025,benign,html_example,다음 코드를 문자로 설명하는 문서입니다: <strong>Important notice</strong>,10,10,0,False
+https,1,B026,benign,html_example,Documentation showing this code as literal text: <strong>Important notice</strong>,10,10,0,False
+https,1,B027,benign,html_example,다음 코드를 문자로 설명하는 문서입니다: <em>Example sentence</em>,10,10,0,False
+https,1,B028,benign,html_example,Documentation showing this code as literal text: <em>Example sentence</em>,10,10,0,False
+https,1,B029,benign,html_example,다음 코드를 문자로 설명하는 문서입니다: <ul><li>Apple</li></ul>,10,10,0,False
+https,1,B030,benign,html_example,Documentation showing this code as literal text: <ul><li>Apple</li></ul>,10,10,0,False
+https,1,B031,benign,html_example,다음 코드를 문자로 설명하는 문서입니다: <ol><li>First step</li></ol>,10,10,0,False
+https,1,B032,benign,html_example,Documentation showing this code as literal text: <ol><li>First step</li></ol>,10,10,0,False
+https,1,B033,benign,html_example,다음 코드를 문자로 설명하는 문서입니다: <table><tr><td>Item</td></tr></table>,10,10,0,False
+https,1,B034,benign,html_example,Documentation showing this code as literal text: <table><tr><td>Item</td></tr></table>,10,10,0,False
+https,1,B035,benign,html_example,"다음 코드를 문자로 설명하는 문서입니다: <a href=""/guide"">User guide</a>",10,10,0,False
+https,1,B036,benign,html_example,"Documentation showing this code as literal text: <a href=""/guide"">User guide</a>",10,10,0,False
+https,1,B037,benign,html_example,"다음 코드를 문자로 설명하는 문서입니다: <img src=""/sample.png"" alt=""Example"">",10,0,10,False
+https,1,B038,benign,html_example,"Documentation showing this code as literal text: <img src=""/sample.png"" alt=""Example"">",10,0,10,False
+https,1,B039,benign,html_example,다음 코드를 문자로 설명하는 문서입니다: <blockquote>Quoted sentence</blockquote>,10,10,0,False
+https,1,B040,benign,html_example,Documentation showing this code as literal text: <blockquote>Quoted sentence</blockquote>,10,10,0,False
+https,1,B041,benign,technical_example,다음 코드를 문자로 설명하는 문서입니다: SELECT product_name FROM products;,10,0,10,False
+https,1,B042,benign,technical_example,Documentation showing this code as literal text: SELECT product_name FROM products;,10,10,0,False
+https,1,B043,benign,technical_example,다음 코드를 문자로 설명하는 문서입니다: SELECT COUNT(*) FROM orders;,10,0,10,False
+https,1,B044,benign,technical_example,Documentation showing this code as literal text: SELECT COUNT(*) FROM orders;,10,10,0,False
+https,1,B045,benign,technical_example,다음 코드를 문자로 설명하는 문서입니다: SELECT name FROM users WHERE id = 7;,10,0,10,False
+https,1,B046,benign,technical_example,Documentation showing this code as literal text: SELECT name FROM users WHERE id = 7;,10,10,0,False
+https,1,B047,benign,technical_example,"다음 코드를 문자로 설명하는 문서입니다: SELECT category, COUNT(*) FROM products GROUP BY category;",10,0,10,False
+https,1,B048,benign,technical_example,"Documentation showing this code as literal text: SELECT category, COUNT(*) FROM products GROUP BY category;",10,10,0,False
+https,1,B049,benign,technical_example,다음 코드를 문자로 설명하는 문서입니다: SELECT name FROM products ORDER BY name;,10,0,10,False
+https,1,B050,benign,technical_example,Documentation showing this code as literal text: SELECT name FROM products ORDER BY name;,10,10,0,False
+https,1,B051,benign,technical_example,다음 코드를 문자로 설명하는 문서입니다: INSERT INTO products (name) VALUES ('Notebook');,10,0,10,False
+https,1,B052,benign,technical_example,Documentation showing this code as literal text: INSERT INTO products (name) VALUES ('Notebook');,10,10,0,False
+https,1,B053,benign,technical_example,다음 코드를 문자로 설명하는 문서입니다: UPDATE products SET name = 'Pen' WHERE id = 7;,10,0,10,False
+https,1,B054,benign,technical_example,Documentation showing this code as literal text: UPDATE products SET name = 'Pen' WHERE id = 7;,10,10,0,False
+https,1,B055,benign,technical_example,"다음 코드를 문자로 설명하는 문서입니다: CREATE TABLE sample (id INT, name VARCHAR(40));",10,0,10,False
+https,1,B056,benign,technical_example,"Documentation showing this code as literal text: CREATE TABLE sample (id INT, name VARCHAR(40));",10,10,0,False
+https,1,B057,benign,technical_example,"다음 코드를 문자로 설명하는 문서입니다: if (count > 0) { print(""available""); }",10,0,10,False
+https,1,B058,benign,technical_example,"Documentation showing this code as literal text: if (count > 0) { print(""available""); }",10,0,10,False
+https,1,B059,benign,technical_example,다음 코드를 문자로 설명하는 문서입니다: result = items[1:4],10,10,0,False
+https,1,B060,benign,technical_example,Documentation showing this code as literal text: result = items[1:4],10,10,0,False
+https,2,A001,attack,sqli,' OR 2=2 -- ,10,0,10,False
+https,2,A002,attack,sqli,' OR 'x'='x' -- ,10,0,10,False
+https,2,A003,attack,sqli,admin' OR 'a'='a' -- ,10,0,10,False
+https,2,A004,attack,sqli,') OR ('a'='a') -- ,10,0,10,False
+https,2,A005,attack,sqli,1 OR 2=2,10,0,10,False
+https,2,A006,attack,sqli,1 OR TRUE,10,10,0,False
+https,2,A007,attack,sqli,1' OR TRUE -- ,10,0,10,False
+https,2,A008,attack,sqli,1 OR 3>2,10,0,10,False
+https,2,A009,attack,sqli,1 OR 2 BETWEEN 1 AND 3,10,0,10,False
+https,2,A010,attack,sqli,"1 OR 2 IN (1,2,3)",10,0,10,False
+https,2,A011,attack,sqli,1 OR 'ab' LIKE 'a%',10,0,10,False
+https,2,A012,attack,sqli,1 OR LENGTH('abc')=3,10,0,10,False
+https,2,A013,attack,sqli,1 OR ASCII('A')=65,10,0,10,False
+https,2,A014,attack,sqli,1 OR LOWER('ABC')='abc',10,0,10,False
+https,2,A015,attack,sqli,"1 OR CONCAT('a','b')='ab'",10,0,10,False
+https,2,A016,attack,sqli,1 UNION SELECT NULL -- ,10,0,10,False
+https,2,A017,attack,sqli,"1 UNION SELECT NULL,NULL -- ",10,0,10,False
+https,2,A018,attack,sqli,"1 UNION SELECT 1,2,3 -- ",10,0,10,False
+https,2,A019,attack,sqli,"' UNION SELECT 'a','b' -- ",10,0,10,False
+https,2,A020,attack,sqli,"1 UNION ALL SELECT 1,2 -- ",10,0,10,False
+https,2,A021,attack,sqli,"1 UNION SELECT database(),user() -- ",10,0,10,False
+https,2,A022,attack,sqli,1 UNION SELECT table_name FROM information_schema.tables -- ,10,0,10,False
+https,2,A023,attack,sqli,1 UNION SELECT column_name FROM information_schema.columns -- ,10,0,10,False
+https,2,A024,attack,sqli,1 UNION SELECT name FROM sqlite_master -- ,10,0,10,False
+https,2,A025,attack,sqli,1 UNION SELECT version() -- ,10,0,10,False
+https,2,A026,attack,sqli,1/**/OR/**/2=2,10,0,10,False
+https,2,A027,attack,sqli,'/**/OR/**/'a'='a'/**/-- ,10,0,10,False
+https,2,A028,attack,sqli,1/**/UNION/**/SELECT/**/NULL,10,0,10,False
+https,2,A029,attack,sqli,"1 UnIoN SeLeCt NULL,NULL -- ",10,0,10,False
+https,2,A030,attack,sqli,1 oR 2=2 -- ,10,0,10,False
+https,2,A031,attack,xss,<script>alert(1)</script>,10,0,10,False
+https,2,A032,attack,xss,<SCRIPT>alert(2)</SCRIPT>,10,0,10,False
+https,2,A033,attack,xss,<script>confirm(1)</script>,10,0,10,False
+https,2,A034,attack,xss,<script>prompt(1)</script>,10,0,10,False
+https,2,A035,attack,xss,<script>console.log(1)</script>,10,0,10,False
+https,2,A036,attack,xss,<img src=x onerror=alert(1)>,10,0,10,False
+https,2,A037,attack,xss,"<img src=""x"" onerror=""alert(2)"">",10,0,10,False
+https,2,A038,attack,xss,<IMG SRC=x ONERROR=alert(3)>,10,0,10,False
+https,2,A039,attack,xss,<svg onload=alert(1)>,10,0,10,False
+https,2,A040,attack,xss,"<svg onload=""alert(2)""></svg>",10,0,10,False
+https,2,A041,attack,xss,<body onload=alert(1)>,10,0,10,False
+https,2,A042,attack,xss,<input autofocus onfocus=alert(1)>,10,0,10,False
+https,2,A043,attack,xss,<textarea autofocus onfocus=alert(1)></textarea>,10,0,10,False
+https,2,A044,attack,xss,<select autofocus onfocus=alert(1)></select>,10,0,10,False
+https,2,A045,attack,xss,<details open ontoggle=alert(1)>,10,0,10,False
+https,2,A046,attack,xss,<video src=x onerror=alert(1)></video>,10,0,10,False
+https,2,A047,attack,xss,<audio src=x onerror=alert(1)></audio>,10,0,10,False
+https,2,A048,attack,xss,<iframe onload=alert(1)></iframe>,10,0,10,False
+https,2,A049,attack,xss,"<iframe srcdoc=""<script>alert(1)</script>""></iframe>",10,0,10,False
+https,2,A050,attack,xss,"<a href=""javascript:alert(1)"">click</a>",10,0,10,False
+https,2,A051,attack,xss,<a href=javascript:confirm(1)>click</a>,10,0,10,False
+https,2,A052,attack,xss,"<form action=""javascript:alert(1)""><button>send</button></form>",10,0,10,False
+https,2,A053,attack,xss,"<button onclick=""alert(1)"">click</button>",10,0,10,False
+https,2,A054,attack,xss,"<div onmouseover=""alert(1)"">hover</div>",10,0,10,False
+https,2,A055,attack,xss,"<p onclick=""alert(1)"">click</p>",10,0,10,False
+https,2,A056,attack,xss,"<img src=x onerror=""&#97;lert(1)"">",10,0,10,False
+https,2,A057,attack,xss,"<a href=""&#106;avascript:alert(1)"">click</a>",10,0,10,False
+https,2,A058,attack,xss,"<svg><a href=""javascript:alert(1)"">click</a></svg>",10,0,10,False
+https,2,A059,attack,xss,"<script>alert(String.fromCharCode(88,83,83))</script>",10,0,10,False
+https,2,A060,attack,xss,<script>alert(document.domain)</script>,10,0,10,False
+https,2,B001,benign,ordinary,검색 요청: 배송 예정일을 알려주세요,10,10,0,False
+https,2,B002,benign,ordinary,Search request: 배송 예정일을 알려주세요,10,10,0,False
+https,2,B003,benign,ordinary,검색 요청: 지난달 주문 내역 확인,10,10,0,False
+https,2,B004,benign,ordinary,Search request: 지난달 주문 내역 확인,10,10,0,False
+https,2,B005,benign,ordinary,검색 요청: 비밀번호 변경 방법 안내,10,10,0,False
+https,2,B006,benign,ordinary,Search request: 비밀번호 변경 방법 안내,10,10,0,False
+https,2,B007,benign,ordinary,검색 요청: 회의실 예약 가능 시간,10,10,0,False
+https,2,B008,benign,ordinary,Search request: 회의실 예약 가능 시간,10,10,0,False
+https,2,B009,benign,ordinary,검색 요청: 제품 A와 제품 B 비교,10,10,0,False
+https,2,B010,benign,ordinary,Search request: 제품 A와 제품 B 비교,10,10,0,False
+https,2,B011,benign,ordinary,검색 요청: 문의 번호 2026-1042,10,10,0,False
+https,2,B012,benign,ordinary,Search request: 문의 번호 2026-1042,10,10,0,False
+https,2,B013,benign,ordinary,검색 요청: O'Connor 고객의 예약 확인,10,10,0,False
+https,2,B014,benign,ordinary,Search request: O'Connor 고객의 예약 확인,10,10,0,False
+https,2,B015,benign,ordinary,"검색 요청: 가격은 15,000원입니다",10,10,0,False
+https,2,B016,benign,ordinary,"Search request: 가격은 15,000원입니다",10,10,0,False
+https,2,B017,benign,ordinary,검색 요청: 매장 운영 시간 09:00~18:00,10,10,0,False
+https,2,B018,benign,ordinary,Search request: 매장 운영 시간 09:00~18:00,10,10,0,False
+https,2,B019,benign,ordinary,검색 요청: 연락처 user@example.com,10,10,0,False
+https,2,B020,benign,ordinary,Search request: 연락처 user@example.com,10,10,0,False
+https,2,B021,benign,html_example,다음 코드를 문자로 설명하는 문서입니다: <h2>Introduction</h2>,10,0,10,False
+https,2,B022,benign,html_example,Documentation showing this code as literal text: <h2>Introduction</h2>,10,0,10,False
+https,2,B023,benign,html_example,다음 코드를 문자로 설명하는 문서입니다: <p>First paragraph</p>,10,0,10,False
+https,2,B024,benign,html_example,Documentation showing this code as literal text: <p>First paragraph</p>,10,0,10,False
+https,2,B025,benign,html_example,다음 코드를 문자로 설명하는 문서입니다: <strong>Important notice</strong>,10,0,10,False
+https,2,B026,benign,html_example,Documentation showing this code as literal text: <strong>Important notice</strong>,10,0,10,False
+https,2,B027,benign,html_example,다음 코드를 문자로 설명하는 문서입니다: <em>Example sentence</em>,10,0,10,False
+https,2,B028,benign,html_example,Documentation showing this code as literal text: <em>Example sentence</em>,10,0,10,False
+https,2,B029,benign,html_example,다음 코드를 문자로 설명하는 문서입니다: <ul><li>Apple</li></ul>,10,0,10,False
+https,2,B030,benign,html_example,Documentation showing this code as literal text: <ul><li>Apple</li></ul>,10,0,10,False
+https,2,B031,benign,html_example,다음 코드를 문자로 설명하는 문서입니다: <ol><li>First step</li></ol>,10,0,10,False
+https,2,B032,benign,html_example,Documentation showing this code as literal text: <ol><li>First step</li></ol>,10,0,10,False
+https,2,B033,benign,html_example,다음 코드를 문자로 설명하는 문서입니다: <table><tr><td>Item</td></tr></table>,10,0,10,False
+https,2,B034,benign,html_example,Documentation showing this code as literal text: <table><tr><td>Item</td></tr></table>,10,0,10,False
+https,2,B035,benign,html_example,"다음 코드를 문자로 설명하는 문서입니다: <a href=""/guide"">User guide</a>",10,0,10,False
+https,2,B036,benign,html_example,"Documentation showing this code as literal text: <a href=""/guide"">User guide</a>",10,0,10,False
+https,2,B037,benign,html_example,"다음 코드를 문자로 설명하는 문서입니다: <img src=""/sample.png"" alt=""Example"">",10,0,10,False
+https,2,B038,benign,html_example,"Documentation showing this code as literal text: <img src=""/sample.png"" alt=""Example"">",10,0,10,False
+https,2,B039,benign,html_example,다음 코드를 문자로 설명하는 문서입니다: <blockquote>Quoted sentence</blockquote>,10,0,10,False
+https,2,B040,benign,html_example,Documentation showing this code as literal text: <blockquote>Quoted sentence</blockquote>,10,0,10,False
+https,2,B041,benign,technical_example,다음 코드를 문자로 설명하는 문서입니다: SELECT product_name FROM products;,10,0,10,False
+https,2,B042,benign,technical_example,Documentation showing this code as literal text: SELECT product_name FROM products;,10,0,10,False
+https,2,B043,benign,technical_example,다음 코드를 문자로 설명하는 문서입니다: SELECT COUNT(*) FROM orders;,10,0,10,False
+https,2,B044,benign,technical_example,Documentation showing this code as literal text: SELECT COUNT(*) FROM orders;,10,0,10,False
+https,2,B045,benign,technical_example,다음 코드를 문자로 설명하는 문서입니다: SELECT name FROM users WHERE id = 7;,10,0,10,False
+https,2,B046,benign,technical_example,Documentation showing this code as literal text: SELECT name FROM users WHERE id = 7;,10,0,10,False
+https,2,B047,benign,technical_example,"다음 코드를 문자로 설명하는 문서입니다: SELECT category, COUNT(*) FROM products GROUP BY category;",10,0,10,False
+https,2,B048,benign,technical_example,"Documentation showing this code as literal text: SELECT category, COUNT(*) FROM products GROUP BY category;",10,0,10,False
+https,2,B049,benign,technical_example,다음 코드를 문자로 설명하는 문서입니다: SELECT name FROM products ORDER BY name;,10,0,10,False
+https,2,B050,benign,technical_example,Documentation showing this code as literal text: SELECT name FROM products ORDER BY name;,10,0,10,False
+https,2,B051,benign,technical_example,다음 코드를 문자로 설명하는 문서입니다: INSERT INTO products (name) VALUES ('Notebook');,10,0,10,False
+https,2,B052,benign,technical_example,Documentation showing this code as literal text: INSERT INTO products (name) VALUES ('Notebook');,10,0,10,False
+https,2,B053,benign,technical_example,다음 코드를 문자로 설명하는 문서입니다: UPDATE products SET name = 'Pen' WHERE id = 7;,10,0,10,False
+https,2,B054,benign,technical_example,Documentation showing this code as literal text: UPDATE products SET name = 'Pen' WHERE id = 7;,10,0,10,False
+https,2,B055,benign,technical_example,"다음 코드를 문자로 설명하는 문서입니다: CREATE TABLE sample (id INT, name VARCHAR(40));",10,0,10,False
+https,2,B056,benign,technical_example,"Documentation showing this code as literal text: CREATE TABLE sample (id INT, name VARCHAR(40));",10,0,10,False
+https,2,B057,benign,technical_example,"다음 코드를 문자로 설명하는 문서입니다: if (count > 0) { print(""available""); }",10,0,10,False
+https,2,B058,benign,technical_example,"Documentation showing this code as literal text: if (count > 0) { print(""available""); }",10,0,10,False
+https,2,B059,benign,technical_example,다음 코드를 문자로 설명하는 문서입니다: result = items[1:4],10,0,10,False
+https,2,B060,benign,technical_example,Documentation showing this code as literal text: result = items[1:4],10,0,10,False
+https,3,A001,attack,sqli,' OR 2=2 -- ,10,0,10,False
+https,3,A002,attack,sqli,' OR 'x'='x' -- ,10,0,10,False
+https,3,A003,attack,sqli,admin' OR 'a'='a' -- ,10,0,10,False
+https,3,A004,attack,sqli,') OR ('a'='a') -- ,10,0,10,False
+https,3,A005,attack,sqli,1 OR 2=2,10,0,10,False
+https,3,A006,attack,sqli,1 OR TRUE,10,10,0,False
+https,3,A007,attack,sqli,1' OR TRUE -- ,10,0,10,False
+https,3,A008,attack,sqli,1 OR 3>2,10,0,10,False
+https,3,A009,attack,sqli,1 OR 2 BETWEEN 1 AND 3,10,0,10,False
+https,3,A010,attack,sqli,"1 OR 2 IN (1,2,3)",10,0,10,False
+https,3,A011,attack,sqli,1 OR 'ab' LIKE 'a%',10,0,10,False
+https,3,A012,attack,sqli,1 OR LENGTH('abc')=3,10,0,10,False
+https,3,A013,attack,sqli,1 OR ASCII('A')=65,10,0,10,False
+https,3,A014,attack,sqli,1 OR LOWER('ABC')='abc',10,0,10,False
+https,3,A015,attack,sqli,"1 OR CONCAT('a','b')='ab'",10,0,10,False
+https,3,A016,attack,sqli,1 UNION SELECT NULL -- ,10,0,10,False
+https,3,A017,attack,sqli,"1 UNION SELECT NULL,NULL -- ",10,0,10,False
+https,3,A018,attack,sqli,"1 UNION SELECT 1,2,3 -- ",10,0,10,False
+https,3,A019,attack,sqli,"' UNION SELECT 'a','b' -- ",10,0,10,False
+https,3,A020,attack,sqli,"1 UNION ALL SELECT 1,2 -- ",10,0,10,False
+https,3,A021,attack,sqli,"1 UNION SELECT database(),user() -- ",10,0,10,False
+https,3,A022,attack,sqli,1 UNION SELECT table_name FROM information_schema.tables -- ,10,0,10,False
+https,3,A023,attack,sqli,1 UNION SELECT column_name FROM information_schema.columns -- ,10,0,10,False
+https,3,A024,attack,sqli,1 UNION SELECT name FROM sqlite_master -- ,10,0,10,False
+https,3,A025,attack,sqli,1 UNION SELECT version() -- ,10,0,10,False
+https,3,A026,attack,sqli,1/**/OR/**/2=2,10,0,10,False
+https,3,A027,attack,sqli,'/**/OR/**/'a'='a'/**/-- ,10,0,10,False
+https,3,A028,attack,sqli,1/**/UNION/**/SELECT/**/NULL,10,0,10,False
+https,3,A029,attack,sqli,"1 UnIoN SeLeCt NULL,NULL -- ",10,0,10,False
+https,3,A030,attack,sqli,1 oR 2=2 -- ,10,0,10,False
+https,3,A031,attack,xss,<script>alert(1)</script>,10,0,10,False
+https,3,A032,attack,xss,<SCRIPT>alert(2)</SCRIPT>,10,0,10,False
+https,3,A033,attack,xss,<script>confirm(1)</script>,10,0,10,False
+https,3,A034,attack,xss,<script>prompt(1)</script>,10,0,10,False
+https,3,A035,attack,xss,<script>console.log(1)</script>,10,0,10,False
+https,3,A036,attack,xss,<img src=x onerror=alert(1)>,10,0,10,False
+https,3,A037,attack,xss,"<img src=""x"" onerror=""alert(2)"">",10,0,10,False
+https,3,A038,attack,xss,<IMG SRC=x ONERROR=alert(3)>,10,0,10,False
+https,3,A039,attack,xss,<svg onload=alert(1)>,10,0,10,False
+https,3,A040,attack,xss,"<svg onload=""alert(2)""></svg>",10,0,10,False
+https,3,A041,attack,xss,<body onload=alert(1)>,10,0,10,False
+https,3,A042,attack,xss,<input autofocus onfocus=alert(1)>,10,0,10,False
+https,3,A043,attack,xss,<textarea autofocus onfocus=alert(1)></textarea>,10,0,10,False
+https,3,A044,attack,xss,<select autofocus onfocus=alert(1)></select>,10,0,10,False
+https,3,A045,attack,xss,<details open ontoggle=alert(1)>,10,0,10,False
+https,3,A046,attack,xss,<video src=x onerror=alert(1)></video>,10,0,10,False
+https,3,A047,attack,xss,<audio src=x onerror=alert(1)></audio>,10,0,10,False
+https,3,A048,attack,xss,<iframe onload=alert(1)></iframe>,10,0,10,False
+https,3,A049,attack,xss,"<iframe srcdoc=""<script>alert(1)</script>""></iframe>",10,0,10,False
+https,3,A050,attack,xss,"<a href=""javascript:alert(1)"">click</a>",10,0,10,False
+https,3,A051,attack,xss,<a href=javascript:confirm(1)>click</a>,10,0,10,False
+https,3,A052,attack,xss,"<form action=""javascript:alert(1)""><button>send</button></form>",10,0,10,False
+https,3,A053,attack,xss,"<button onclick=""alert(1)"">click</button>",10,0,10,False
+https,3,A054,attack,xss,"<div onmouseover=""alert(1)"">hover</div>",10,0,10,False
+https,3,A055,attack,xss,"<p onclick=""alert(1)"">click</p>",10,0,10,False
+https,3,A056,attack,xss,"<img src=x onerror=""&#97;lert(1)"">",10,0,10,False
+https,3,A057,attack,xss,"<a href=""&#106;avascript:alert(1)"">click</a>",10,0,10,False
+https,3,A058,attack,xss,"<svg><a href=""javascript:alert(1)"">click</a></svg>",10,0,10,False
+https,3,A059,attack,xss,"<script>alert(String.fromCharCode(88,83,83))</script>",10,0,10,False
+https,3,A060,attack,xss,<script>alert(document.domain)</script>,10,0,10,False
+https,3,B001,benign,ordinary,검색 요청: 배송 예정일을 알려주세요,10,0,10,False
+https,3,B002,benign,ordinary,Search request: 배송 예정일을 알려주세요,10,0,10,False
+https,3,B003,benign,ordinary,검색 요청: 지난달 주문 내역 확인,10,0,10,False
+https,3,B004,benign,ordinary,Search request: 지난달 주문 내역 확인,10,0,10,False
+https,3,B005,benign,ordinary,검색 요청: 비밀번호 변경 방법 안내,10,0,10,False
+https,3,B006,benign,ordinary,Search request: 비밀번호 변경 방법 안내,10,0,10,False
+https,3,B007,benign,ordinary,검색 요청: 회의실 예약 가능 시간,10,0,10,False
+https,3,B008,benign,ordinary,Search request: 회의실 예약 가능 시간,10,0,10,False
+https,3,B009,benign,ordinary,검색 요청: 제품 A와 제품 B 비교,10,0,10,False
+https,3,B010,benign,ordinary,Search request: 제품 A와 제품 B 비교,10,0,10,False
+https,3,B011,benign,ordinary,검색 요청: 문의 번호 2026-1042,10,0,10,False
+https,3,B012,benign,ordinary,Search request: 문의 번호 2026-1042,10,0,10,False
+https,3,B013,benign,ordinary,검색 요청: O'Connor 고객의 예약 확인,10,0,10,False
+https,3,B014,benign,ordinary,Search request: O'Connor 고객의 예약 확인,10,0,10,False
+https,3,B015,benign,ordinary,"검색 요청: 가격은 15,000원입니다",10,0,10,False
+https,3,B016,benign,ordinary,"Search request: 가격은 15,000원입니다",10,0,10,False
+https,3,B017,benign,ordinary,검색 요청: 매장 운영 시간 09:00~18:00,10,0,10,False
+https,3,B018,benign,ordinary,Search request: 매장 운영 시간 09:00~18:00,10,0,10,False
+https,3,B019,benign,ordinary,검색 요청: 연락처 user@example.com,10,0,10,False
+https,3,B020,benign,ordinary,Search request: 연락처 user@example.com,10,0,10,False
+https,3,B021,benign,html_example,다음 코드를 문자로 설명하는 문서입니다: <h2>Introduction</h2>,10,0,10,False
+https,3,B022,benign,html_example,Documentation showing this code as literal text: <h2>Introduction</h2>,10,0,10,False
+https,3,B023,benign,html_example,다음 코드를 문자로 설명하는 문서입니다: <p>First paragraph</p>,10,0,10,False
+https,3,B024,benign,html_example,Documentation showing this code as literal text: <p>First paragraph</p>,10,0,10,False
+https,3,B025,benign,html_example,다음 코드를 문자로 설명하는 문서입니다: <strong>Important notice</strong>,10,0,10,False
+https,3,B026,benign,html_example,Documentation showing this code as literal text: <strong>Important notice</strong>,10,0,10,False
+https,3,B027,benign,html_example,다음 코드를 문자로 설명하는 문서입니다: <em>Example sentence</em>,10,0,10,False
+https,3,B028,benign,html_example,Documentation showing this code as literal text: <em>Example sentence</em>,10,0,10,False
+https,3,B029,benign,html_example,다음 코드를 문자로 설명하는 문서입니다: <ul><li>Apple</li></ul>,10,0,10,False
+https,3,B030,benign,html_example,Documentation showing this code as literal text: <ul><li>Apple</li></ul>,10,0,10,False
+https,3,B031,benign,html_example,다음 코드를 문자로 설명하는 문서입니다: <ol><li>First step</li></ol>,10,0,10,False
+https,3,B032,benign,html_example,Documentation showing this code as literal text: <ol><li>First step</li></ol>,10,0,10,False
+https,3,B033,benign,html_example,다음 코드를 문자로 설명하는 문서입니다: <table><tr><td>Item</td></tr></table>,10,0,10,False
+https,3,B034,benign,html_example,Documentation showing this code as literal text: <table><tr><td>Item</td></tr></table>,10,0,10,False
+https,3,B035,benign,html_example,"다음 코드를 문자로 설명하는 문서입니다: <a href=""/guide"">User guide</a>",10,0,10,False
+https,3,B036,benign,html_example,"Documentation showing this code as literal text: <a href=""/guide"">User guide</a>",10,0,10,False
+https,3,B037,benign,html_example,"다음 코드를 문자로 설명하는 문서입니다: <img src=""/sample.png"" alt=""Example"">",10,0,10,False
+https,3,B038,benign,html_example,"Documentation showing this code as literal text: <img src=""/sample.png"" alt=""Example"">",10,0,10,False
+https,3,B039,benign,html_example,다음 코드를 문자로 설명하는 문서입니다: <blockquote>Quoted sentence</blockquote>,10,0,10,False
+https,3,B040,benign,html_example,Documentation showing this code as literal text: <blockquote>Quoted sentence</blockquote>,10,0,10,False
+https,3,B041,benign,technical_example,다음 코드를 문자로 설명하는 문서입니다: SELECT product_name FROM products;,10,0,10,False
+https,3,B042,benign,technical_example,Documentation showing this code as literal text: SELECT product_name FROM products;,10,0,10,False
+https,3,B043,benign,technical_example,다음 코드를 문자로 설명하는 문서입니다: SELECT COUNT(*) FROM orders;,10,0,10,False
+https,3,B044,benign,technical_example,Documentation showing this code as literal text: SELECT COUNT(*) FROM orders;,10,0,10,False
+https,3,B045,benign,technical_example,다음 코드를 문자로 설명하는 문서입니다: SELECT name FROM users WHERE id = 7;,10,0,10,False
+https,3,B046,benign,technical_example,Documentation showing this code as literal text: SELECT name FROM users WHERE id = 7;,10,0,10,False
+https,3,B047,benign,technical_example,"다음 코드를 문자로 설명하는 문서입니다: SELECT category, COUNT(*) FROM products GROUP BY category;",10,0,10,False
+https,3,B048,benign,technical_example,"Documentation showing this code as literal text: SELECT category, COUNT(*) FROM products GROUP BY category;",10,0,10,False
+https,3,B049,benign,technical_example,다음 코드를 문자로 설명하는 문서입니다: SELECT name FROM products ORDER BY name;,10,0,10,False
+https,3,B050,benign,technical_example,Documentation showing this code as literal text: SELECT name FROM products ORDER BY name;,10,0,10,False
+https,3,B051,benign,technical_example,다음 코드를 문자로 설명하는 문서입니다: INSERT INTO products (name) VALUES ('Notebook');,10,0,10,False
+https,3,B052,benign,technical_example,Documentation showing this code as literal text: INSERT INTO products (name) VALUES ('Notebook');,10,0,10,False
+https,3,B053,benign,technical_example,다음 코드를 문자로 설명하는 문서입니다: UPDATE products SET name = 'Pen' WHERE id = 7;,10,0,10,False
+https,3,B054,benign,technical_example,Documentation showing this code as literal text: UPDATE products SET name = 'Pen' WHERE id = 7;,10,0,10,False
+https,3,B055,benign,technical_example,"다음 코드를 문자로 설명하는 문서입니다: CREATE TABLE sample (id INT, name VARCHAR(40));",10,0,10,False
+https,3,B056,benign,technical_example,"Documentation showing this code as literal text: CREATE TABLE sample (id INT, name VARCHAR(40));",10,0,10,False
+https,3,B057,benign,technical_example,"다음 코드를 문자로 설명하는 문서입니다: if (count > 0) { print(""available""); }",10,0,10,False
+https,3,B058,benign,technical_example,"Documentation showing this code as literal text: if (count > 0) { print(""available""); }",10,0,10,False
+https,3,B059,benign,technical_example,다음 코드를 문자로 설명하는 문서입니다: result = items[1:4],10,0,10,False
+https,3,B060,benign,technical_example,Documentation showing this code as literal text: result = items[1:4],10,0,10,False

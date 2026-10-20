@@ -1,0 +1,9 @@
+{
+  "response_ids": 7200,
+  "matched_ids": 7200,
+  "issues": {},
+  "examples": [],
+  "A006_rules": {
+    "탐지 메시지 없음": 60
+  }
+}

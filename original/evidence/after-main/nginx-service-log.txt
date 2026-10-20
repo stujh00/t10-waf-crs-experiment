@@ -1,0 +1,101 @@
+Oct 16 02:31:35 t10-lab-host systemd[1]: Reloaded nginx.service - A high performance web server and a reverse proxy server.
+Oct 16 02:56:23 t10-lab-host systemd[1]: Reloading nginx.service - A high performance web server and a reverse proxy server...
+Oct 16 02:56:24 t10-lab-host nginx[8166]: 2026/10/16 02:56:23 [notice] 8166#8166: ModSecurity-nginx v1.0.3 (rules loaded inline/local/remote: 0/2367/0)
+Oct 16 02:56:24 t10-lab-host nginx[8166]: 2026/10/16 02:56:23 [notice] 8166#8166: signal process started
+Oct 16 02:56:24 t10-lab-host systemd[1]: Reloaded nginx.service - A high performance web server and a reverse proxy server.
+Oct 16 06:13:24 t10-lab-host systemd[1]: Stopping nginx.service - A high performance web server and a reverse proxy server...
+Oct 16 06:14:50 t10-lab-host systemd[1]: nginx.service: A process of this unit has been killed by the OOM killer.
+Oct 16 06:14:50 t10-lab-host systemd[1]: nginx.service: Main process exited, code=killed, status=9/KILL
+Oct 16 06:14:50 t10-lab-host systemd[1]: nginx.service: Killing process 8168 (nginx) with signal SIGKILL.
+Oct 16 06:14:50 t10-lab-host systemd[1]: nginx.service: Killing process 8169 (nginx) with signal SIGKILL.
+Oct 16 06:14:50 t10-lab-host systemd[1]: nginx.service: Failed with result 'oom-kill'.
+Oct 16 06:14:50 t10-lab-host systemd[1]: Stopped nginx.service - A high performance web server and a reverse proxy server.
+Oct 16 06:14:50 t10-lab-host systemd[1]: nginx.service: Consumed 9.792s CPU time, 650.5M memory peak, 0B memory swap peak.
+Oct 16 06:14:50 t10-lab-host systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+Oct 16 06:14:51 t10-lab-host nginx[13506]: 2026/10/16 06:14:51 [notice] 13506#13506: ModSecurity-nginx v1.0.3 (rules loaded inline/local/remote: 0/2367/0)
+Oct 16 06:14:52 t10-lab-host nginx[13539]: 2026/10/16 06:14:51 [notice] 13539#13539: ModSecurity-nginx v1.0.3 (rules loaded inline/local/remote: 0/2367/0)
+Oct 16 06:14:52 t10-lab-host systemd[1]: Started nginx.service - A high performance web server and a reverse proxy server.
+Oct 16 06:15:44 t10-lab-host systemd[1]: Stopping nginx.service - A high performance web server and a reverse proxy server...
+Oct 16 06:15:46 t10-lab-host systemd[1]: nginx.service: Deactivated successfully.
+Oct 16 06:15:46 t10-lab-host systemd[1]: Stopped nginx.service - A high performance web server and a reverse proxy server.
+Oct 16 06:15:46 t10-lab-host systemd[1]: nginx.service: Consumed 1.609s CPU time, 126.3M memory peak, 0B memory swap peak.
+Oct 16 06:15:46 t10-lab-host systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+Oct 16 06:15:46 t10-lab-host nginx[16064]: 2026/10/16 06:15:46 [notice] 16064#16064: ModSecurity-nginx v1.0.3 (rules loaded inline/local/remote: 0/2367/0)
+Oct 16 06:15:47 t10-lab-host nginx[16073]: 2026/10/16 06:15:46 [notice] 16073#16073: ModSecurity-nginx v1.0.3 (rules loaded inline/local/remote: 0/2367/0)
+Oct 16 06:15:47 t10-lab-host systemd[1]: Started nginx.service - A high performance web server and a reverse proxy server.
+Oct 16 06:15:55 t10-lab-host systemd[1]: Stopping nginx.service - A high performance web server and a reverse proxy server...
+Oct 16 06:15:55 t10-lab-host systemd[1]: nginx.service: Deactivated successfully.
+Oct 16 06:15:55 t10-lab-host systemd[1]: Stopped nginx.service - A high performance web server and a reverse proxy server.
+Oct 16 06:15:55 t10-lab-host systemd[1]: nginx.service: Consumed 1.494s CPU time, 121.0M memory peak, 0B memory swap peak.
+Oct 16 06:15:55 t10-lab-host systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+Oct 16 06:15:56 t10-lab-host nginx[16350]: 2026/10/16 06:15:55 [notice] 16350#16350: ModSecurity-nginx v1.0.3 (rules loaded inline/local/remote: 0/2367/0)
+Oct 16 06:15:57 t10-lab-host nginx[16362]: 2026/10/16 06:15:56 [notice] 16362#16362: ModSecurity-nginx v1.0.3 (rules loaded inline/local/remote: 0/2367/0)
+Oct 16 06:15:57 t10-lab-host systemd[1]: Started nginx.service - A high performance web server and a reverse proxy server.
+Oct 16 06:16:28 t10-lab-host systemd[1]: Stopping nginx.service - A high performance web server and a reverse proxy server...
+Oct 16 06:16:29 t10-lab-host systemd[1]: nginx.service: Deactivated successfully.
+Oct 16 06:16:29 t10-lab-host systemd[1]: Stopped nginx.service - A high performance web server and a reverse proxy server.
+Oct 16 06:16:29 t10-lab-host systemd[1]: nginx.service: Consumed 1.600s CPU time, 122.1M memory peak, 0B memory swap peak.
+Oct 16 06:16:29 t10-lab-host systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+Oct 16 06:16:30 t10-lab-host nginx[17410]: 2026/10/16 06:16:29 [notice] 17410#17410: ModSecurity-nginx v1.0.3 (rules loaded inline/local/remote: 0/2367/0)
+Oct 16 06:16:30 t10-lab-host nginx[17422]: 2026/10/16 06:16:30 [notice] 17422#17422: ModSecurity-nginx v1.0.3 (rules loaded inline/local/remote: 0/2367/0)
+Oct 16 06:16:30 t10-lab-host systemd[1]: Started nginx.service - A high performance web server and a reverse proxy server.
+Oct 16 06:16:50 t10-lab-host systemd[1]: Stopping nginx.service - A high performance web server and a reverse proxy server...
+Oct 16 06:16:50 t10-lab-host systemd[1]: nginx.service: Deactivated successfully.
+Oct 16 06:16:50 t10-lab-host systemd[1]: Stopped nginx.service - A high performance web server and a reverse proxy server.
+Oct 16 06:16:50 t10-lab-host systemd[1]: nginx.service: Consumed 1.522s CPU time, 121.9M memory peak, 0B memory swap peak.
+Oct 16 06:16:50 t10-lab-host systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+Oct 16 06:16:51 t10-lab-host nginx[18305]: 2026/10/16 06:16:50 [notice] 18305#18305: ModSecurity-nginx v1.0.3 (rules loaded inline/local/remote: 0/2367/0)
+Oct 16 06:16:52 t10-lab-host nginx[18321]: 2026/10/16 06:16:51 [notice] 18321#18321: ModSecurity-nginx v1.0.3 (rules loaded inline/local/remote: 0/2367/0)
+Oct 16 06:16:52 t10-lab-host systemd[1]: Started nginx.service - A high performance web server and a reverse proxy server.
+Oct 16 06:18:04 t10-lab-host systemd[1]: Stopping nginx.service - A high performance web server and a reverse proxy server...
+Oct 16 06:18:05 t10-lab-host systemd[1]: nginx.service: Deactivated successfully.
+Oct 16 06:18:05 t10-lab-host systemd[1]: Stopped nginx.service - A high performance web server and a reverse proxy server.
+Oct 16 06:18:05 t10-lab-host systemd[1]: nginx.service: Consumed 1.599s CPU time, 121.9M memory peak, 0B memory swap peak.
+Oct 16 06:18:05 t10-lab-host systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+Oct 16 06:18:05 t10-lab-host nginx[21292]: 2026/10/16 06:18:05 [notice] 21292#21292: ModSecurity-nginx v1.0.3 (rules loaded inline/local/remote: 0/2367/0)
+Oct 16 06:18:06 t10-lab-host nginx[21307]: 2026/10/16 06:18:05 [notice] 21307#21307: ModSecurity-nginx v1.0.3 (rules loaded inline/local/remote: 0/2367/0)
+Oct 16 06:18:06 t10-lab-host systemd[1]: Started nginx.service - A high performance web server and a reverse proxy server.
+Oct 16 06:19:22 t10-lab-host systemd[1]: Stopping nginx.service - A high performance web server and a reverse proxy server...
+Oct 16 06:19:23 t10-lab-host systemd[1]: nginx.service: Deactivated successfully.
+Oct 16 06:19:23 t10-lab-host systemd[1]: Stopped nginx.service - A high performance web server and a reverse proxy server.
+Oct 16 06:19:23 t10-lab-host systemd[1]: nginx.service: Consumed 1.643s CPU time, 122.2M memory peak, 0B memory swap peak.
+Oct 16 06:19:23 t10-lab-host systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+Oct 16 06:19:24 t10-lab-host nginx[27674]: 2026/10/16 06:19:23 [notice] 27674#27674: ModSecurity-nginx v1.0.3 (rules loaded inline/local/remote: 0/2367/0)
+Oct 16 06:19:24 t10-lab-host nginx[27686]: 2026/10/16 06:19:24 [notice] 27686#27686: ModSecurity-nginx v1.0.3 (rules loaded inline/local/remote: 0/2367/0)
+Oct 16 06:19:24 t10-lab-host systemd[1]: Started nginx.service - A high performance web server and a reverse proxy server.
+Oct 16 06:21:44 t10-lab-host systemd[1]: Stopping nginx.service - A high performance web server and a reverse proxy server...
+Oct 16 06:21:44 t10-lab-host systemd[1]: nginx.service: Deactivated successfully.
+Oct 16 06:21:44 t10-lab-host systemd[1]: Stopped nginx.service - A high performance web server and a reverse proxy server.
+Oct 16 06:21:44 t10-lab-host systemd[1]: nginx.service: Consumed 1.614s CPU time, 128.6M memory peak, 0B memory swap peak.
+Oct 16 06:21:44 t10-lab-host systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+Oct 16 06:21:45 t10-lab-host nginx[44395]: 2026/10/16 06:21:45 [notice] 44395#44395: ModSecurity-nginx v1.0.3 (rules loaded inline/local/remote: 0/2367/0)
+Oct 16 06:21:46 t10-lab-host nginx[44411]: 2026/10/16 06:21:45 [notice] 44411#44411: ModSecurity-nginx v1.0.3 (rules loaded inline/local/remote: 0/2367/0)
+Oct 16 06:21:46 t10-lab-host systemd[1]: Started nginx.service - A high performance web server and a reverse proxy server.
+Oct 16 07:11:52 t10-lab-host systemd[1]: Reloading nginx.service - A high performance web server and a reverse proxy server...
+Oct 16 07:11:53 t10-lab-host nginx[44739]: 2026/10/16 07:11:52 [notice] 44739#44739: ModSecurity-nginx v1.0.3 (rules loaded inline/local/remote: 0/2367/0)
+Oct 16 07:11:53 t10-lab-host nginx[44739]: 2026/10/16 07:11:52 [notice] 44739#44739: signal process started
+Oct 16 07:11:53 t10-lab-host systemd[1]: Reloaded nginx.service - A high performance web server and a reverse proxy server.
+Oct 16 08:55:23 t10-lab-host systemd[1]: Stopping nginx.service - A high performance web server and a reverse proxy server...
+Oct 16 08:55:24 t10-lab-host systemd[1]: nginx.service: Deactivated successfully.
+Oct 16 08:55:24 t10-lab-host systemd[1]: Stopped nginx.service - A high performance web server and a reverse proxy server.
+Oct 16 08:55:24 t10-lab-host systemd[1]: nginx.service: Consumed 4.146s CPU time.
+-- Boot 5ab352f40f694009997da1d02ab13f77 --
+Oct 20 00:23:30 t10-lab-host systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+Oct 20 00:23:32 t10-lab-host nginx[543]: 2026/10/20 00:23:30 [notice] 543#543: ModSecurity-nginx v1.0.3 (rules loaded inline/local/remote: 0/2367/0)
+Oct 20 00:23:33 t10-lab-host nginx[817]: 2026/10/20 00:23:33 [notice] 817#817: ModSecurity-nginx v1.0.3 (rules loaded inline/local/remote: 0/2367/0)
+Oct 20 00:23:33 t10-lab-host systemd[1]: Started nginx.service - A high performance web server and a reverse proxy server.
+Oct 20 00:39:52 t10-lab-host systemd[1]: Reloading nginx.service - A high performance web server and a reverse proxy server...
+Oct 20 00:39:52 t10-lab-host nginx[1238]: 2026/10/20 00:39:52 [notice] 1238#1238: ModSecurity-nginx v1.0.3 (rules loaded inline/local/remote: 0/2367/0)
+Oct 20 00:39:52 t10-lab-host nginx[1238]: 2026/10/20 00:39:52 [notice] 1238#1238: signal process started
+Oct 20 00:39:52 t10-lab-host systemd[1]: Reloaded nginx.service - A high performance web server and a reverse proxy server.
+Oct 20 00:50:09 t10-lab-host systemd[1]: nginx.service: A process of this unit has been killed by the OOM killer.
+Oct 20 00:50:09 t10-lab-host systemd[1]: nginx.service: Main process exited, code=killed, status=9/KILL
+Oct 20 00:50:09 t10-lab-host start-stop-daemon[1388]: /sbin/start-stop-daemon: warning: failed to kill 820: No such process
+Oct 20 00:50:09 t10-lab-host systemd[1]: nginx.service: Killing process 1240 (nginx) with signal SIGKILL.
+Oct 20 00:50:09 t10-lab-host systemd[1]: nginx.service: Killing process 1241 (nginx) with signal SIGKILL.
+Oct 20 00:50:09 t10-lab-host systemd[1]: nginx.service: Failed with result 'oom-kill'.
+Oct 20 00:50:09 t10-lab-host systemd[1]: nginx.service: Consumed 2.980s CPU time.
+Oct 20 00:58:49 t10-lab-host systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+Oct 20 00:58:49 t10-lab-host nginx[3710]: 2026/10/20 00:58:49 [notice] 3710#3710: ModSecurity-nginx v1.0.3 (rules loaded inline/local/remote: 0/2367/0)
+Oct 20 00:58:50 t10-lab-host nginx[3712]: 2026/10/20 00:58:49 [notice] 3712#3712: ModSecurity-nginx v1.0.3 (rules loaded inline/local/remote: 0/2367/0)
+Oct 20 00:58:50 t10-lab-host systemd[1]: Started nginx.service - A high performance web server and a reverse proxy server.

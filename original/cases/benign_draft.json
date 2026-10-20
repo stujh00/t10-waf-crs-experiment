@@ -1,0 +1,542 @@
+[
+  {
+    "id": "B001",
+    "label": "benign",
+    "category": "ordinary",
+    "base_id": "ordinary-01",
+    "wrapper_language": "ko",
+    "payload": "검색 요청: 배송 예정일을 알려주세요",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B002",
+    "label": "benign",
+    "category": "ordinary",
+    "base_id": "ordinary-01",
+    "wrapper_language": "en",
+    "payload": "Search request: 배송 예정일을 알려주세요",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B003",
+    "label": "benign",
+    "category": "ordinary",
+    "base_id": "ordinary-02",
+    "wrapper_language": "ko",
+    "payload": "검색 요청: 지난달 주문 내역 확인",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B004",
+    "label": "benign",
+    "category": "ordinary",
+    "base_id": "ordinary-02",
+    "wrapper_language": "en",
+    "payload": "Search request: 지난달 주문 내역 확인",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B005",
+    "label": "benign",
+    "category": "ordinary",
+    "base_id": "ordinary-03",
+    "wrapper_language": "ko",
+    "payload": "검색 요청: 비밀번호 변경 방법 안내",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B006",
+    "label": "benign",
+    "category": "ordinary",
+    "base_id": "ordinary-03",
+    "wrapper_language": "en",
+    "payload": "Search request: 비밀번호 변경 방법 안내",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B007",
+    "label": "benign",
+    "category": "ordinary",
+    "base_id": "ordinary-04",
+    "wrapper_language": "ko",
+    "payload": "검색 요청: 회의실 예약 가능 시간",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B008",
+    "label": "benign",
+    "category": "ordinary",
+    "base_id": "ordinary-04",
+    "wrapper_language": "en",
+    "payload": "Search request: 회의실 예약 가능 시간",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B009",
+    "label": "benign",
+    "category": "ordinary",
+    "base_id": "ordinary-05",
+    "wrapper_language": "ko",
+    "payload": "검색 요청: 제품 A와 제품 B 비교",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B010",
+    "label": "benign",
+    "category": "ordinary",
+    "base_id": "ordinary-05",
+    "wrapper_language": "en",
+    "payload": "Search request: 제품 A와 제품 B 비교",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B011",
+    "label": "benign",
+    "category": "ordinary",
+    "base_id": "ordinary-06",
+    "wrapper_language": "ko",
+    "payload": "검색 요청: 문의 번호 2026-1042",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B012",
+    "label": "benign",
+    "category": "ordinary",
+    "base_id": "ordinary-06",
+    "wrapper_language": "en",
+    "payload": "Search request: 문의 번호 2026-1042",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B013",
+    "label": "benign",
+    "category": "ordinary",
+    "base_id": "ordinary-07",
+    "wrapper_language": "ko",
+    "payload": "검색 요청: O'Connor 고객의 예약 확인",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B014",
+    "label": "benign",
+    "category": "ordinary",
+    "base_id": "ordinary-07",
+    "wrapper_language": "en",
+    "payload": "Search request: O'Connor 고객의 예약 확인",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B015",
+    "label": "benign",
+    "category": "ordinary",
+    "base_id": "ordinary-08",
+    "wrapper_language": "ko",
+    "payload": "검색 요청: 가격은 15,000원입니다",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B016",
+    "label": "benign",
+    "category": "ordinary",
+    "base_id": "ordinary-08",
+    "wrapper_language": "en",
+    "payload": "Search request: 가격은 15,000원입니다",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B017",
+    "label": "benign",
+    "category": "ordinary",
+    "base_id": "ordinary-09",
+    "wrapper_language": "ko",
+    "payload": "검색 요청: 매장 운영 시간 09:00~18:00",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B018",
+    "label": "benign",
+    "category": "ordinary",
+    "base_id": "ordinary-09",
+    "wrapper_language": "en",
+    "payload": "Search request: 매장 운영 시간 09:00~18:00",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B019",
+    "label": "benign",
+    "category": "ordinary",
+    "base_id": "ordinary-10",
+    "wrapper_language": "ko",
+    "payload": "검색 요청: 연락처 user@example.com",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B020",
+    "label": "benign",
+    "category": "ordinary",
+    "base_id": "ordinary-10",
+    "wrapper_language": "en",
+    "payload": "Search request: 연락처 user@example.com",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B021",
+    "label": "benign",
+    "category": "html_example",
+    "base_id": "html_example-01",
+    "wrapper_language": "ko",
+    "payload": "다음 코드를 문자로 설명하는 문서입니다: <h2>Introduction</h2>",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B022",
+    "label": "benign",
+    "category": "html_example",
+    "base_id": "html_example-01",
+    "wrapper_language": "en",
+    "payload": "Documentation showing this code as literal text: <h2>Introduction</h2>",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B023",
+    "label": "benign",
+    "category": "html_example",
+    "base_id": "html_example-02",
+    "wrapper_language": "ko",
+    "payload": "다음 코드를 문자로 설명하는 문서입니다: <p>First paragraph</p>",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B024",
+    "label": "benign",
+    "category": "html_example",
+    "base_id": "html_example-02",
+    "wrapper_language": "en",
+    "payload": "Documentation showing this code as literal text: <p>First paragraph</p>",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B025",
+    "label": "benign",
+    "category": "html_example",
+    "base_id": "html_example-03",
+    "wrapper_language": "ko",
+    "payload": "다음 코드를 문자로 설명하는 문서입니다: <strong>Important notice</strong>",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B026",
+    "label": "benign",
+    "category": "html_example",
+    "base_id": "html_example-03",
+    "wrapper_language": "en",
+    "payload": "Documentation showing this code as literal text: <strong>Important notice</strong>",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B027",
+    "label": "benign",
+    "category": "html_example",
+    "base_id": "html_example-04",
+    "wrapper_language": "ko",
+    "payload": "다음 코드를 문자로 설명하는 문서입니다: <em>Example sentence</em>",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B028",
+    "label": "benign",
+    "category": "html_example",
+    "base_id": "html_example-04",
+    "wrapper_language": "en",
+    "payload": "Documentation showing this code as literal text: <em>Example sentence</em>",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B029",
+    "label": "benign",
+    "category": "html_example",
+    "base_id": "html_example-05",
+    "wrapper_language": "ko",
+    "payload": "다음 코드를 문자로 설명하는 문서입니다: <ul><li>Apple</li></ul>",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B030",
+    "label": "benign",
+    "category": "html_example",
+    "base_id": "html_example-05",
+    "wrapper_language": "en",
+    "payload": "Documentation showing this code as literal text: <ul><li>Apple</li></ul>",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B031",
+    "label": "benign",
+    "category": "html_example",
+    "base_id": "html_example-06",
+    "wrapper_language": "ko",
+    "payload": "다음 코드를 문자로 설명하는 문서입니다: <ol><li>First step</li></ol>",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B032",
+    "label": "benign",
+    "category": "html_example",
+    "base_id": "html_example-06",
+    "wrapper_language": "en",
+    "payload": "Documentation showing this code as literal text: <ol><li>First step</li></ol>",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B033",
+    "label": "benign",
+    "category": "html_example",
+    "base_id": "html_example-07",
+    "wrapper_language": "ko",
+    "payload": "다음 코드를 문자로 설명하는 문서입니다: <table><tr><td>Item</td></tr></table>",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B034",
+    "label": "benign",
+    "category": "html_example",
+    "base_id": "html_example-07",
+    "wrapper_language": "en",
+    "payload": "Documentation showing this code as literal text: <table><tr><td>Item</td></tr></table>",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B035",
+    "label": "benign",
+    "category": "html_example",
+    "base_id": "html_example-08",
+    "wrapper_language": "ko",
+    "payload": "다음 코드를 문자로 설명하는 문서입니다: <a href=\"/guide\">User guide</a>",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B036",
+    "label": "benign",
+    "category": "html_example",
+    "base_id": "html_example-08",
+    "wrapper_language": "en",
+    "payload": "Documentation showing this code as literal text: <a href=\"/guide\">User guide</a>",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B037",
+    "label": "benign",
+    "category": "html_example",
+    "base_id": "html_example-09",
+    "wrapper_language": "ko",
+    "payload": "다음 코드를 문자로 설명하는 문서입니다: <img src=\"/sample.png\" alt=\"Example\">",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B038",
+    "label": "benign",
+    "category": "html_example",
+    "base_id": "html_example-09",
+    "wrapper_language": "en",
+    "payload": "Documentation showing this code as literal text: <img src=\"/sample.png\" alt=\"Example\">",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B039",
+    "label": "benign",
+    "category": "html_example",
+    "base_id": "html_example-10",
+    "wrapper_language": "ko",
+    "payload": "다음 코드를 문자로 설명하는 문서입니다: <blockquote>Quoted sentence</blockquote>",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B040",
+    "label": "benign",
+    "category": "html_example",
+    "base_id": "html_example-10",
+    "wrapper_language": "en",
+    "payload": "Documentation showing this code as literal text: <blockquote>Quoted sentence</blockquote>",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B041",
+    "label": "benign",
+    "category": "technical_example",
+    "base_id": "technical_example-01",
+    "wrapper_language": "ko",
+    "payload": "다음 코드를 문자로 설명하는 문서입니다: SELECT product_name FROM products;",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B042",
+    "label": "benign",
+    "category": "technical_example",
+    "base_id": "technical_example-01",
+    "wrapper_language": "en",
+    "payload": "Documentation showing this code as literal text: SELECT product_name FROM products;",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B043",
+    "label": "benign",
+    "category": "technical_example",
+    "base_id": "technical_example-02",
+    "wrapper_language": "ko",
+    "payload": "다음 코드를 문자로 설명하는 문서입니다: SELECT COUNT(*) FROM orders;",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B044",
+    "label": "benign",
+    "category": "technical_example",
+    "base_id": "technical_example-02",
+    "wrapper_language": "en",
+    "payload": "Documentation showing this code as literal text: SELECT COUNT(*) FROM orders;",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B045",
+    "label": "benign",
+    "category": "technical_example",
+    "base_id": "technical_example-03",
+    "wrapper_language": "ko",
+    "payload": "다음 코드를 문자로 설명하는 문서입니다: SELECT name FROM users WHERE id = 7;",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B046",
+    "label": "benign",
+    "category": "technical_example",
+    "base_id": "technical_example-03",
+    "wrapper_language": "en",
+    "payload": "Documentation showing this code as literal text: SELECT name FROM users WHERE id = 7;",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B047",
+    "label": "benign",
+    "category": "technical_example",
+    "base_id": "technical_example-04",
+    "wrapper_language": "ko",
+    "payload": "다음 코드를 문자로 설명하는 문서입니다: SELECT category, COUNT(*) FROM products GROUP BY category;",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B048",
+    "label": "benign",
+    "category": "technical_example",
+    "base_id": "technical_example-04",
+    "wrapper_language": "en",
+    "payload": "Documentation showing this code as literal text: SELECT category, COUNT(*) FROM products GROUP BY category;",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B049",
+    "label": "benign",
+    "category": "technical_example",
+    "base_id": "technical_example-05",
+    "wrapper_language": "ko",
+    "payload": "다음 코드를 문자로 설명하는 문서입니다: SELECT name FROM products ORDER BY name;",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B050",
+    "label": "benign",
+    "category": "technical_example",
+    "base_id": "technical_example-05",
+    "wrapper_language": "en",
+    "payload": "Documentation showing this code as literal text: SELECT name FROM products ORDER BY name;",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B051",
+    "label": "benign",
+    "category": "technical_example",
+    "base_id": "technical_example-06",
+    "wrapper_language": "ko",
+    "payload": "다음 코드를 문자로 설명하는 문서입니다: INSERT INTO products (name) VALUES ('Notebook');",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B052",
+    "label": "benign",
+    "category": "technical_example",
+    "base_id": "technical_example-06",
+    "wrapper_language": "en",
+    "payload": "Documentation showing this code as literal text: INSERT INTO products (name) VALUES ('Notebook');",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B053",
+    "label": "benign",
+    "category": "technical_example",
+    "base_id": "technical_example-07",
+    "wrapper_language": "ko",
+    "payload": "다음 코드를 문자로 설명하는 문서입니다: UPDATE products SET name = 'Pen' WHERE id = 7;",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B054",
+    "label": "benign",
+    "category": "technical_example",
+    "base_id": "technical_example-07",
+    "wrapper_language": "en",
+    "payload": "Documentation showing this code as literal text: UPDATE products SET name = 'Pen' WHERE id = 7;",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B055",
+    "label": "benign",
+    "category": "technical_example",
+    "base_id": "technical_example-08",
+    "wrapper_language": "ko",
+    "payload": "다음 코드를 문자로 설명하는 문서입니다: CREATE TABLE sample (id INT, name VARCHAR(40));",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B056",
+    "label": "benign",
+    "category": "technical_example",
+    "base_id": "technical_example-08",
+    "wrapper_language": "en",
+    "payload": "Documentation showing this code as literal text: CREATE TABLE sample (id INT, name VARCHAR(40));",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B057",
+    "label": "benign",
+    "category": "technical_example",
+    "base_id": "technical_example-09",
+    "wrapper_language": "ko",
+    "payload": "다음 코드를 문자로 설명하는 문서입니다: if (count > 0) { print(\"available\"); }",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B058",
+    "label": "benign",
+    "category": "technical_example",
+    "base_id": "technical_example-09",
+    "wrapper_language": "en",
+    "payload": "Documentation showing this code as literal text: if (count > 0) { print(\"available\"); }",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B059",
+    "label": "benign",
+    "category": "technical_example",
+    "base_id": "technical_example-10",
+    "wrapper_language": "ko",
+    "payload": "다음 코드를 문자로 설명하는 문서입니다: result = items[1:4]",
+    "reason": "Input is permitted as literal text by the lab policy"
+  },
+  {
+    "id": "B060",
+    "label": "benign",
+    "category": "technical_example",
+    "base_id": "technical_example-10",
+    "wrapper_language": "en",
+    "payload": "Documentation showing this code as literal text: result = items[1:4]",
+    "reason": "Input is permitted as literal text by the lab policy"
+  }
+]
